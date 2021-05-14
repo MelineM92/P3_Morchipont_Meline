@@ -379,22 +379,183 @@ ul {
 /***********************************/
 /***********************************/
 /************layouts****************/
+@media only screen and (max-width: 600px) {
+  body > header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    box-shadow: 0 0 10px 1px #999;
+    cursor: pointer;
+  }
+  body > header > header > img {
+    width: 50%;
+  }
+}
+/************POUR PC****************/
 body > header {
   display: flex;
   justify-content: center;
   padding: 1rem;
   box-shadow: 0 0 10px 1px #999;
+  cursor: pointer;
 }
-body > header.H > img.H__logo {
+body > header > header > img {
   width: 50%;
 }
-body > header.H > button.H__goBack > i {
-  color: red;
-}
 
+@media only screen and (max-width: 600px) {
+  body > nav {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #dad8d8;
+  }
+  body > nav div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 12px 0;
+  }
+  body > nav div > i {
+    padding: 0 6px 0 0;
+    cursor: pointer;
+  }
+  body > nav div > input {
+    background-color: #dad8d8;
+    border: none;
+    text-align: center;
+    width: 27%;
+  }
+  body > nav > form {
+    width: 100%;
+    padding-bottom: 47px;
+    background-color: #e6e6e6;
+  }
+  body > nav > form > h1 {
+    padding: 0 101px;
+    text-align: center;
+    font-size: 31px;
+  }
+  body > nav > form > p {
+    padding: 0px 108px;
+    text-align: center;
+  }
+  body > nav > form > div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 8px 0 0 0;
+  }
+  body > nav > form > div > button {
+    width: 213px;
+    height: 43px;
+    border-radius: 25px 25px 25px 25px;
+    border: none;
+    background: linear-gradient(-6deg, #9356DC, #FF79DA);
+    border-color: #f7f7f7;
+    cursor: pointer;
+  }
+  body > nav > form > div > button > span {
+    color: white;
+    font-weight: bold;
+  }
+}
+/************Pour pc****************/
 body > nav {
   display: flex;
   flex-flow: row wrap;
+  background-color: #dad8d8;
+}
+body > nav div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 12px 0;
+}
+body > nav div > i {
+  padding: 0 6px 0 0;
+  cursor: pointer;
+}
+body > nav div > input {
+  background-color: #dad8d8;
+  border: none;
+  text-align: center;
+  width: 27%;
+}
+body > nav > form {
+  width: 100%;
+  padding-bottom: 47px;
+  background-color: #e6e6e6;
+}
+body > nav > form > h1 {
+  padding: 0 101px;
+  text-align: center;
+  font-size: 31px;
+}
+body > nav > form > p {
+  padding: 0px 108px;
+  text-align: center;
+}
+body > nav > form > div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 8px 0 0 0;
+}
+body > nav > form > div > button {
+  width: 213px;
+  height: 43px;
+  border-radius: 25px 25px 25px 25px;
+  border: none;
+  background: linear-gradient(-6deg, #9356DC, #FF79DA);
+  border-color: #f7f7f7;
+  cursor: pointer;
+}
+body > nav > form > div > button > span {
+  color: white;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  body > main {
+    background-color: #e6e6e6;
+  }
+  body > main > section > h2 {
+    padding-left: 31px;
+    padding-top: 10PX;
+  }
+  body > main > section > ul {
+    list-style: none;
+  }
+  body > main > section > ul > div {
+    background-color: #90eed2;
+    width: 20%;
+    height: 6%;
+    position: absolute;
+    margin-left: 282px;
+    margin-top: 25px;
+  }
+  body > main > section > ul > div > span {
+    display: block;
+    text-align: center;
+    margin-top: 7px;
+    color: #27805b;
+    font-weight: bolder;
+  }
+  body > main > section > ul > li {
+    background-color: white;
+    width: 93%;
+    border-radius: 9%;
+  }
+  body > main > section > ul > li > img {
+    width: 100%;
+    border-radius: 9% 9% 0 0;
+    height: 235px;
+    object-fit: cover;
+  }
+}
+/************Pour pc****************/
+body > main {
+  background-color: #e6e6e6;
 }
 /***********************************/
 /***********************************/
