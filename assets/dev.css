@@ -14,6 +14,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -403,105 +404,49 @@ body > header > header > img {
   width: 50%;
 }
 
-@media only screen and (max-width: 600px) {
-  body > nav {
-    display: flex;
-    flex-flow: row wrap;
-    background-color: #dad8d8;
-  }
-  body > nav div {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    padding: 12px 0;
-  }
-  body > nav div > i {
-    padding: 0 6px 0 0;
-    cursor: pointer;
-  }
-  body > nav div > input {
-    background-color: #dad8d8;
-    border: none;
-    text-align: center;
-    width: 27%;
-  }
-  body > nav > form {
-    width: 100%;
-    padding-bottom: 47px;
-    background-color: #e6e6e6;
-  }
-  body > nav > form > h1 {
-    padding: 0 101px;
-    text-align: center;
-    font-size: 31px;
-  }
-  body > nav > form > p {
-    padding: 0px 108px;
-    text-align: center;
-  }
-  body > nav > form > div {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin: 8px 0 0 0;
-  }
-  body > nav > form > div > button {
-    width: 213px;
-    height: 43px;
-    border-radius: 25px 25px 25px 25px;
-    border: none;
-    background: linear-gradient(-6deg, #9356DC, #FF79DA);
-    border-color: #f7f7f7;
-    cursor: pointer;
-  }
-  body > nav > form > div > button > span {
-    color: white;
-    font-weight: bold;
-  }
-}
-/************Pour pc****************/
-body > nav {
+.jumbotron {
   display: flex;
   flex-flow: row wrap;
   background-color: #dad8d8;
 }
-body > nav div {
+.jumbotron__map {
   display: flex;
   width: 100%;
   justify-content: center;
   padding: 12px 0;
 }
-body > nav div > i {
+.jumbotron__map > i {
   padding: 0 6px 0 0;
   cursor: pointer;
 }
-body > nav div > input {
+.jumbotron__map > input {
   background-color: #dad8d8;
   border: none;
   text-align: center;
   width: 27%;
+  font-weight: bold;
 }
-body > nav > form {
+.jumbotron__cta {
   width: 100%;
   padding-bottom: 47px;
-  background-color: #e6e6e6;
+  background-color: #F6F6F6;
 }
-body > nav > form > h1 {
+.jumbotron__cta > h1 {
   padding: 0 101px;
   text-align: center;
-  font-size: 31px;
+  font-size: 30px;
 }
-body > nav > form > p {
-  padding: 0px 108px;
+.jumbotron__cta > p {
+  padding: 0px 105px;
   text-align: center;
 }
-body > nav > form > div {
+.jumbotron__cta > div {
   display: flex;
   width: 100%;
   justify-content: center;
   margin: 8px 0 0 0;
 }
-body > nav > form > div > button {
+.jumbotron__cta > div > button {
   width: 213px;
   height: 43px;
   border-radius: 25px 25px 25px 25px;
@@ -510,53 +455,146 @@ body > nav > form > div > button {
   border-color: #f7f7f7;
   cursor: pointer;
 }
-body > nav > form > div > button > span {
+.jumbotron__cta > div > button > span {
   color: white;
   font-weight: bold;
 }
 
-@media only screen and (max-width: 600px) {
-  body > main {
-    background-color: #e6e6e6;
-  }
-  body > main > section > h2 {
-    padding-left: 31px;
-    padding-top: 10PX;
-  }
-  body > main > section > ul {
-    list-style: none;
-  }
-  body > main > section > ul > div {
-    background-color: #90eed2;
-    width: 20%;
-    height: 6%;
-    position: absolute;
-    margin-left: 282px;
-    margin-top: 25px;
-  }
-  body > main > section > ul > div > span {
-    display: block;
-    text-align: center;
-    margin-top: 7px;
-    color: #27805b;
-    font-weight: bolder;
-  }
-  body > main > section > ul > li {
-    background-color: white;
-    width: 93%;
-    border-radius: 9%;
-  }
-  body > main > section > ul > li > img {
-    width: 100%;
-    border-radius: 9% 9% 0 0;
-    height: 235px;
-    object-fit: cover;
-  }
+.fonctionnement__titre {
+  padding-left: 20px;
 }
-/************Pour pc****************/
-body > main {
-  background-color: #e6e6e6;
+.fonctionnement__list .fa-mobile-alt {
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #7c7b7b;
 }
+.fonctionnement__list .fa-list {
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #7c7b7b;
+}
+.fonctionnement__list .fa-store {
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #9356DC;
+}
+.fonctionnement__list .titrenav {
+  font-weight: bold;
+}
+.fonctionnement > ul > li {
+  position: relative;
+  background: #F6F6F6;
+  list-style: none;
+  padding: 25px;
+  margin: 30px;
+  border-radius: 25px;
+  box-shadow: 0 0 6px 0px #F6F6F6;
+}
+.fonctionnement > ul > li::before {
+  content: "1";
+  background-color: #9356DC;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  border-radius: 1em;
+  position: absolute;
+  margin: -10px 0px 0px -35px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.fonctionnement > ul > li:nth-child(1):before {
+  content: "1";
+}
+.fonctionnement > ul > li:nth-child(2):before {
+  content: "2";
+}
+.fonctionnement > ul > li:nth-child(3):before {
+  content: "3";
+}
+
+.restaurant {
+  background-color: #F6F6F6;
+}
+.restaurant__card {
+  position: relative;
+  background-color: white;
+  border-radius: 10% 10% 0 0;
+}
+.restaurant > h3 {
+  padding-left: 25px;
+  font-size: x-large;
+}
+.restaurant__card > figcaption {
+  font-weight: bold;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.restaurant__card > p {
+  font-size: smaller;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+.restaurant__card > a {
+  text-decoration: none;
+  background-color: #99E2D0;
+  padding: 5px;
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  color: #4b9e8f;
+  font-weight: bold;
+}
+.restaurant__card > i {
+  position: absolute;
+  top: 85%;
+  right: 5%;
+  cursor: pointer;
+}
+.restaurant__card > .fa-heart:hover {
+  background-color: #9356DC;
+}
+.restaurant__img {
+  width: 100%;
+  border-radius: 10% 10% 0 0;
+  object-fit: cover;
+}
+
+.PDP {
+  background-color: #3c3c3c;
+}
+.PDP__omf {
+  margin-top: 0;
+}
+.PDP__omf .ST {
+  padding-top: 10px;
+  padding-left: 25px;
+  color: #FFF;
+}
+.PDP__omf .ST1 {
+  color: #FFF;
+  padding-top: 10px;
+}
+.PDP__omf .fa-utensils {
+  position: absolute;
+  left: 40px;
+  color: #FFF;
+}
+.PDP__omf .fa-hands-helping {
+  position: absolute;
+  left: 40px;
+  color: #FFF;
+}
+.PDP .titre {
+  padding: 20Px 0px 0 35px;
+  margin-bottom: 15px;
+  font-family: "Shrikhand";
+  color: white;
+  font-size: x-large;
+  font-weight: 100;
+}
+
 /***********************************/
 /***********************************/
 /************pages******************/

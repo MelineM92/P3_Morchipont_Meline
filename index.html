@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil Oh my food!</title>
-    <script src="https://kit.fontawesome.com/1adabde225.js" crossorigin="anonymous"></script>
-    <!-- description
-    fav icone
-script font awesom -->
+    <meta name="description"content="Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte !">
 
-<link rel="stylesheet" href="assets/dev.css">
+    <script src="https://kit.fontawesome.com/1adabde225.js" crossorigin="anonymous"></script>
+   
+    <link rel="shorcut icon" href="assets\images\logo\ohmyfood@2x.svg"type="image/x-icone">
+    <link rel="stylesheet" href="assets/dev.css">
+
+
 
 </head>
 <body>
@@ -20,12 +22,12 @@ script font awesom -->
 
 
 
-    <nav>
-            <div>
+    <nav class="jumbotron">
+            <div class="jumbotron__map">
                 <i class="fas fa-map-marker-alt"></i>
                 <input class="localisation" type="search" placeholder="Paris, Belleville">
             </div>
-        <form>
+        <section class="jumbotron__cta">
             <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
             <div>
@@ -33,59 +35,32 @@ script font awesom -->
                  <span>Explorer nos restaurants</span>
               </button>
             </div>
-        </form>
+        </section>
     </nav>
 
 
 
     <main>
-        <section>
-            <h2>Fonctionnement</h2>
-            <ul>
-                <div>
-                    <span>Nouveau</span>
-                </div>
+        <section class="fonctionnement">
+            <h2 class="fonctionnement__titre">Fonctionnement</h2>
+            <ul class="fonctionnement__list">
                 <li>
-                    <img src="C:\Users\PC\Desktop\projet3\assets\images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restau1">
-                    <i class="far fa-heart fa-2x"></i>
-                    <h3>La palette du goût</h3>
-                    <p>Ménilmontant</p>
+                    <i class="fas fa-mobile-alt"></i>
+                    <span class="titrenav">Choisissez votre restaurant</span>
                 </li>
-            </ul>
+            
 
-            <ul>
-                <div>
-                    <span>Nouveau</span>
-                </div>
+            
                 <li>
-                    <img src="C:\Users\PC\Desktop\projet3\assets\images\restaurants\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restau2">
-                    <i class="far fa-heart fa-2x"></i>
-                    <h3>La note enchantée</h3>
-                    <p>Charonne</p>
+                    <i class="fas fa-list"></i>
+                    <span class="titrenav">Composez votre menu</span>
                 </li>
-            </ul>
+            
 
-            <ul>
-                <div>
-                    <span>Nouveau</span>
-                </div>
+            
                 <li>
-                    <img src="C:\Users\PC\Desktop\projet3\assets\images\restaurants\stil-u2Lp8tXIcjw-unsplash.jpg" alt="restau3">
-                    <i class="far fa-heart fa-2x"></i>
-                    <h3>A la Française</h3>
-                    <p>Cité rouge</p>
-                </li>
-            </ul>
-
-            <ul>
-                <div>
-                    <span>Nouveau</span>
-                </div>
-                <li>
-                    <img src="C:\Users\PC\Desktop\projet3\assets\images\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restau4">
-                    <i class="far fa-heart fa-2x"></i>
-                    <h3>Le délice des sens</h3>
-                    <p>Folie-Méricourt</p>
+                    <i class="fas fa-store"></i>
+                    <span class="titrenav">Dégustez au restaurant</span>
                 </li>
             </ul>
         </section>
@@ -93,19 +68,56 @@ script font awesom -->
 
 
 
-    <article>
-        <h3></h3>
-        <figure>
-            <img src="" alt="">
-            <figcaption></figcaption>
-            <a href=""></a>
+    <article class="restaurant">
+        <h3>Restaurant</h3>
+        <figure class="restaurant__card">
+            <img class="restaurant__img" src="C:\Users\PC\Desktop\projet3\assets\images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restau">
+            <figcaption>la palette du goût Ménilmontant</figcaption>
+            <p>Ménilmontant</p>
+            <a href="Nouveau">Nouveau</a>
+            <i class="far fa-heart fa-2x"></i>
+        </figure>
+
+        <figure class="restaurant__card">
+            <img class="restaurant__img" src="C:\Users\PC\Desktop\projet3\assets\images\restaurants\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restau">
+            <figcaption>La note enchantée</figcaption>
+            <p>Charonne</p>
+            <a href="Nouveau">Nouveau</a>
+            <i class="far fa-heart fa-2x"></i>
+        </figure>
+
+        <figure class="restaurant__card">
+            <img class="restaurant__img" src="C:\Users\PC\Desktop\projet3\assets\images\restaurants\stil-u2Lp8tXIcjw-unsplash.jpg" height="263.17" width="403" alt="restau">
+            <figcaption>A la Française</figcaption>
+            <p>Cité Rouge</p>
+            <a href="Nouveau">Nouveau</a>
+            <i class="far fa-heart fa-2x"></i>
+        </figure>
+
+        <figure class="restaurant__card">
+            <img class="restaurant__img" src="C:\Users\PC\Desktop\projet3\assets\images\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restau">
+            <figcaption>Le délice des sens</figcaption>
+            <p>Folie-Méricourt</p>
+            <a href="Nouveau">Nouveau</a>
+            <i class="far fa-heart fa-2x"></i>
         </figure>
     </article>
 
 
 
-    <footer>
-        <li></li>
+    <footer class="PDP">
+        <h3 class="titre">Ohmyfood</h3>
+        <ul class="PDP__omf">
+            <li class="ST">Proposer un restaurant
+                <i class="fas fa-utensils"></i>
+            </li>
+            <li class="ST">Devenir partenaire
+                <i class="fas fa-hands-helping"></i>
+            </li>
+            <li class="ST1">Mentions légales</li>
+            <li class="ST1">Contact</li>
+         </ul>
     </footer>
+
 </body>
 </html>
