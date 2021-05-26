@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
      DD SOME TRAITMENTS HERE WITH nodejs's package for instance
      THIS FILE WOULD BE IMPORTED FROM style.scss TO build/style.css
@@ -552,8 +553,12 @@ body > header > header > img {
   right: 5%;
   cursor: pointer;
 }
-.restaurant__card > .fa-heart:hover {
-  background-color: #9356DC;
+.restaurant__card > i:before {
+  content: "♡";
+}
+.restaurant__card > i:hover:before {
+  content: "♥";
+  background-color: linear-gradient(-6deg, #9356DC, #FF79DA);
 }
 .restaurant__img {
   width: 100%;

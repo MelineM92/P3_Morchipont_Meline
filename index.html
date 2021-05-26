@@ -6,27 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil Oh my food!</title>
     <meta name="description"content="Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte !">
-
+    <!-- fav icon -->
     <script src="https://kit.fontawesome.com/1adabde225.js" crossorigin="anonymous"></script>
-   
     <link rel="shorcut icon" href="assets\images\logo\ohmyfood@2x.svg"type="image/x-icone">
     <link rel="stylesheet" href="assets/dev.css">
-
-
-
 </head>
+    <!-- body>header>img -->
 <body>
+
+    <!-- HEADER -->
+
     <header> 
-        <img src="assets\images\logo\ohmyfood.png" alt="logo OH myfood">
+        <img src="assets\images\logo\ohmyfood.png" alt="logo OH myfood" width="50%">
     </header>
 
+    <!-- NAV -->
 
+    <!-- nav.jumbotron>(form>i+input)+(section.jumbotron__cta>h1+p+div+button+span) -->
 
     <nav class="jumbotron">
-            <div class="jumbotron__map">
+            <form class="jumbotron__map">
                 <i class="fas fa-map-marker-alt"></i>
                 <input class="localisation" type="search" placeholder="Paris, Belleville">
-            </div>
+            </form>
         <section class="jumbotron__cta">
             <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
@@ -37,9 +39,12 @@
             </div>
         </section>
     </nav>
+    <!-- NAV -->
 
 
+    <!-- MAIN -->
 
+    <!-- main>(section.fonctionnement>h2.fonctionnement__titre+(ul.fonctionnement__list.--accueil)*3(li>i+span))+article.restaurants>h3+(fig.restaurants__card>img.restaurant__img+figcaption+p+a)*4-->
     <main>
         <section class="fonctionnement">
             <h2 class="fonctionnement__titre">Fonctionnement</h2>
@@ -75,7 +80,7 @@
             <figcaption>la palette du goût Ménilmontant</figcaption>
             <p>Ménilmontant</p>
             <a href="Nouveau">Nouveau</a>
-            <i class="far fa-heart fa-2x"></i>
+            <i class=""></i>
         </figure>
 
         <figure class="restaurant__card">
@@ -83,7 +88,7 @@
             <figcaption>La note enchantée</figcaption>
             <p>Charonne</p>
             <a href="Nouveau">Nouveau</a>
-            <i class="far fa-heart fa-2x"></i>
+            <i class=""></i>
         </figure>
 
         <figure class="restaurant__card">
@@ -91,7 +96,7 @@
             <figcaption>A la Française</figcaption>
             <p>Cité Rouge</p>
             <a href="Nouveau">Nouveau</a>
-            <i class="far fa-heart fa-2x"></i>
+            <i class=""></i>
         </figure>
 
         <figure class="restaurant__card">
@@ -99,11 +104,16 @@
             <figcaption>Le délice des sens</figcaption>
             <p>Folie-Méricourt</p>
             <a href="Nouveau">Nouveau</a>
-            <i class="far fa-heart fa-2x"></i>
+            <i class=""></i>
         </figure>
     </article>
 
+    <!-- MAIN -->
 
+
+    <!-- FOOTER -->
+
+    <!-- footer>h3+(ul>li>i)*2+(li)*2 -->
 
     <footer class="PDP">
         <h3 class="titre">Ohmyfood</h3>
@@ -118,6 +128,7 @@
             <li class="ST1">Contact</li>
          </ul>
     </footer>
-
+    <!-- FOOTER -->
+    
 </body>
 </html>
