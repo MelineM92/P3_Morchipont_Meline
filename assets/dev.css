@@ -389,9 +389,6 @@ ul {
     box-shadow: 0 0 10px 1px #999;
     cursor: pointer;
   }
-  body > header > header > img {
-    width: 50%;
-  }
 }
 /************POUR PC****************/
 body > header {
@@ -400,9 +397,6 @@ body > header {
   padding: 1rem;
   box-shadow: 0 0 10px 1px #999;
   cursor: pointer;
-}
-body > header > header > img {
-  width: 50%;
 }
 
 .jumbotron {
@@ -415,6 +409,7 @@ body > header > header > img {
   width: 100%;
   justify-content: center;
   padding: 12px 0;
+  box-shadow: inset 0px 1px 10px 0px grey;
 }
 .jumbotron__map > i {
   padding: 0 6px 0 0;
@@ -440,6 +435,7 @@ body > header > header > img {
 .jumbotron__cta > p {
   padding: 0px 105px;
   text-align: center;
+  color: darkgray;
 }
 .jumbotron__cta > div {
   display: flex;
@@ -455,6 +451,7 @@ body > header > header > img {
   background: linear-gradient(-6deg, #9356DC, #FF79DA);
   border-color: #f7f7f7;
   cursor: pointer;
+  box-shadow: inset 0px 1px 10px 0px grey;
 }
 .jumbotron__cta > div > button > span {
   color: white;
