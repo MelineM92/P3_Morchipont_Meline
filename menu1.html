@@ -25,24 +25,26 @@
 
     <header>
 
-        <button class="retour" type="retour"><i class="fas fa-arrow-left"></i></button>
-
         <img src="assets\images\logo\ohmyfood.png" alt="logo OH myfood" width="50%">
-
+        <a href="index.html" class="headerbarre__btnRetour"><i class="fas fa-arrow-left"></i>
     </header>
 
 <!-- MENU -->
 
-    <img src="C:\Users\PC\Desktop\projet3\assets\images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="AP" width="100%" height="250px">
+<main>
+
+    <figure class="bg">
+    <img src="assets\images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="AP" width="100%">
+    </figure>
+
     
-    <main>
 
         <!-- h1+i+section.entrees>h2+(div>h3+h4+p)*3 -->
-
-        <h1>La palette du goût</h1>
+    <section class="laCarte">
+        <h1 class="laCarte__titre">La palette du goût</h1>
         <i class="far fa-heart"></i>
         
-        <section class="entrees">
+        <section class="laCarte__entrees">
             <h2>ENTRÉES</h2>
             <div>
                 <h3>Fricassée d'escargot</h3>
@@ -63,7 +65,7 @@
 
         <!-- section.plats>h2+(div>h3+h4+p)*3 -->
 
-        <section class="plats">
+        <section class="laCarte__plats">
             <h2>PLATS</h2>
             <div>
                 <h3>Filet de boeuf aux herbes</h3>
@@ -84,7 +86,7 @@
 
         <!-- section.desserts>h2+(div>h3+h4+p)*3 -->
 
-        <section class="desserts">
+        <section class="laCarte__desserts">
             <h2>DESSERTS</h2>
             <div>
                 <h3>Paris-Brest</h3>
@@ -106,6 +108,7 @@
         <button class="commander" type="commander">Commander</button>
         <input class="commander" type="Commander"/>
 
+    </section>
     </main>
 
     <!-- FOOTER -->

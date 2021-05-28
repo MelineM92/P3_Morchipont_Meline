@@ -388,6 +388,7 @@ ul {
     padding: 1rem;
     box-shadow: 0 0 10px 1px #999;
     cursor: pointer;
+    position: relative;
   }
 }
 /************POUR PC****************/
@@ -397,6 +398,7 @@ body > header {
   padding: 1rem;
   box-shadow: 0 0 10px 1px #999;
   cursor: pointer;
+  position: relative;
 }
 
 .jumbotron {
@@ -409,7 +411,6 @@ body > header {
   width: 100%;
   justify-content: center;
   padding: 12px 0;
-  box-shadow: inset 0px 1px 10px 0px grey;
 }
 .jumbotron__map > i {
   padding: 0 6px 0 0;
@@ -513,6 +514,7 @@ body > header {
 
 .restaurant {
   background-color: #F6F6F6;
+  padding-bottom: 30px;
 }
 .restaurant__card {
   position: relative;
@@ -521,6 +523,7 @@ body > header {
 }
 .restaurant > h3 {
   padding-left: 25px;
+  padding-top: 20px;
   font-size: x-large;
 }
 .restaurant__card > figcaption {
@@ -534,7 +537,7 @@ body > header {
   padding-bottom: 10px;
   margin-top: 10px;
 }
-.restaurant__card > a {
+.restaurant__card > span {
   text-decoration: none;
   background-color: #99E2D0;
   padding: 5px;
@@ -555,7 +558,6 @@ body > header {
 }
 .restaurant__card > i:hover:before {
   content: "♥";
-  background-color: linear-gradient(-6deg, #9356DC, #FF79DA);
 }
 .restaurant__img {
   width: 100%;
@@ -565,6 +567,8 @@ body > header {
 
 .PDP {
   background-color: #3c3c3c;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .PDP__omf {
   margin-top: 0;
@@ -588,6 +592,9 @@ body > header {
   left: 40px;
   color: #FFF;
 }
+.PDP__omf > a {
+  text-decoration: none;
+}
 .PDP .titre {
   padding: 20Px 0px 0 35px;
   margin-bottom: 15px;
@@ -600,6 +607,17 @@ body > header {
 /***********************************/
 /***********************************/
 /************pages******************/
+> header {
+  padding-left: 90px;
+}
+
+.bg {
+  margin: 0;
+}
+.bg > img {
+  margin: 0;
+}
+
 /***********************************/
 /***********************************/
 /************themes*****************/
