@@ -1,0 +1,283 @@
+// @import "./vendors/bootstrap/scss/bootstrap.scss";
+
+/*
+     DD SOME TRAITMENTS HERE WITH nodejs's package for instance
+     THIS FILE WOULD BE IMPORTED FROM style.scss TO build/style.css
+*/
+
+
+
+// @import './node_modules/bootstrap/scss/bootstrap.scss';
+// C:\Users\achic\myDesktop\RUBY\ocr_p7_bis\node_modules\bootstrap\scss\bootstrap.scss
+@import "./main.scss";
+/***********************************/
+/***********************************/
+/***********************************/
+/************base*******************/
+
+/***********************************/
+/***********************************/
+/************component**************/
+
+/***********************************/
+/***********************************/
+/************layouts****************/
+
+/***********************************/
+/***********************************/
+/************pages******************/
+
+/***********************************/
+/***********************************/
+/************themes*****************/
+
+/***********************************/
+/***********************************/
+/************utils******************/
+
+/***********************************/
+/***********************************/
+/************vendors****************/
+
+/***********************************/
+/***********************************/
+
+
+
+.abFull{position:absolute;top:0;left:0;bottom:0;right:0;}
+.margCenter{margin:0 auto;}
+
+/*********************************************************************************************************************************************************************/
+/*********************************************************************************************************************************************************************/
+ul.safe,ol.safe{margin:0;}
+/*********************************************************************************************************************************************************************/
+/*********************************************************************************************************************************************************************/
+body{
+  height: 100%;width: 100%;position: absolute;
+  &>div[id="root"]{
+    position: absolute;
+    top: 0;left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 4rem 0;
+    /*
+    &:before{
+      content:"";
+      position:absolute;bottom:0;left:0;width:700px;height:500px;
+      background: url(./assets/img/leaf.jpg) bottom right no-repeat;
+      z-index: -1;;transform: scaleX(-1);
+    }
+    &:after{
+      content:"";
+      position:absolute;bottom:0;right:0;width:700px;height:500px;
+      background: url(./assets/img/leaf.jpg) bottom right no-repeat;
+      z-index: -1;
+    }
+    */
+    &>*{position:fixed;
+    }
+    &>header{    
+      z-index: 100;
+      top: 0;
+      height:4rem;
+      border-bottom:solid;
+      nav.navbar{
+        z-index: 100;position:fixed;width:100%;border-bottom:1px solid;box-shadow:0 0 10px 1px;
+      }
+    }
+    &>nav{
+      z-index: 90;
+      display: flex;
+      justify-content: center;
+      top: 4rem;
+      left:2rem;right:2rem;
+      &>.breadcrumb{display:flex;justify-content:center;border:1px solid;border-top:0;}
+      .breadcrumb .active{}
+    }
+    &>main{
+      // &:not(#pound){padding:4rem 0 !important;}
+      overflow-y: scroll;      top:4rem;bottom:4rem;      left:0;right:0;
+      background: center / cover no-repeat  url("./assets/img/castle.jpg");
+      >*:not(hr){@extend .container !optional;@extend .px-5 !optional;
+        margin: 0 auto;position:relative;padding: 1rem 0;
+        background: rgba(200,200,200,.5);
+      }
+      &>*:first-child{margin-top:3rem;}
+      &>*:last-child{margin-bottom:2rem;}
+      &>h1,&>h2{@extend .text-center !optional;}
+    }
+    &>footer{
+      bottom:0;
+      height: 4rem;
+      background: silver;
+      border-top:solid;
+    }
+  }
+  /*********************************************************************************************************************************************************************/
+  &.menu_,&.menu_home{
+    main{
+      /***JUMBOTRON***/
+      .list-group a{transition: background .7s,color .4s;background:transparent;
+        svg{font-size:3rem;}
+      }
+      .list-group a:hover{@extend .bg-primary !optional;@extend .text-light !optional;}
+      .jumbotron{position:relative;margin:0 auto;transition:box-shadow .4s;
+        h1{transition:font-size .4s, margin .4s;}
+        &:hover{
+          &::before{opacity:.05;}
+        }
+        &>*{position:relative;font-weight: bold;text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px blue;}
+      }
+      .jumbotron:before{@extend .abFull !optional;transition:opacity .4s;content:"";background:url(./assets/img/leaf.jpg) center center no-repeat, #000;opacity:.75;}
+      /***************/
+      /***DECOUNTER***/
+      .decounter{opacity:.9}
+      /***************/
+      /***************/
+      /***DECOUNTER***/
+      .decounter{opacity:.9}
+      /***************/
+      /***************/
+      /***aticle***/
+      &>article{background: white;font-weight: bold;}
+      /***************/
+      
+
+    }
+  }
+  &.menu_gallery{
+    main{
+      background:white;
+      #galleryCarousel{
+        border-bottom:solid;
+        .carousel-indicators{position:absolute;bottom: -2.5rem;background:rgba(0,0,0,.5);}
+        .carousel-item>img{
+          // border-radius: 1rem !important;
+          padding: 1rem;
+          background: rgba(192,192,192,.5);
+        }
+        a[class^="carousel-control"]{
+          transition: background .4s, border .4s;
+          span{transition: color .4s;}
+        }
+        &:hover{
+          span.carousel-control-icons{
+            color:red;font-weight:bold;font-size:2rem;
+          }
+          a[class^="carousel-control"]:hover{background: rgba(0,0,0,.5);
+            span{color:silver;}
+            &[class$="prev"]{border-right: 1px dotted red;}
+            &[class$="next"]{border-left: 1px dotted red;}
+          }
+        }
+      }
+    }
+  }
+  &.menu_contest{
+    ul.slogans{list-style: none;
+      &>li{@extend .container !optional;transition: box-shadow .4s;
+        &:hover{box-shadow:0 0 10px 1px;}
+        background:whitesmoke;
+        .slogan{@extend .container !optional;
+          border:solid;
+          background: silver;;
+        }
+      }
+    }
+  }
+  &.menu_rider{*
+    .card{transition: background .4s;
+      &:hover{background:white;}
+      .card-body{
+        h4{text-decoration:underline;
+          span{font-weight: 350;}
+        }
+      }
+      &>span{position:absolute;        right: 1rem;        color: antiquewhite;        background: black;        padding: 0 4px;        border-radius: 5px;}
+    }
+  }
+  &.menu_geo{
+  }
+
+
+
+  
+  @media (min-width: 576px) {
+    &.menu_home{
+      /***JUMBOTRON***/
+      main:hover{
+        // h1{font-size:5rem;}
+      }
+      
+      /***DECOUNTER***/
+      .card-text{display:flex;justify-content:space-between;
+        &>ul{list-style-type:none;padding:0;}
+        li{font-size:2rem;
+          b{color:brown;float: left;font-size:2rem;}
+        }
+      }
+    }
+    &.menu_{}
+    &.menu_{}
+    &.menu_{}
+  }
+    
+  @media (min-width: 768px) {
+    &.menu_home{
+      /***JUMBOTRON***/
+      .card-text{display:flex;justify-content:space-around;
+      }
+      &:hover{box-shadow: 0 0 5rem 1rem black;
+        // h1{font-size:5rem;margin: 0 -3em;&,&+p{color:whitesmoke;}}
+      }
+      main>article:hover{background:whitesmoke;}
+    }
+    &.menu_{}
+    &.menu_{}
+    &.menu_{}
+    
+  }
+    
+  @media (min-width: 992px) {
+    &.menu_{}
+    &.menu_{}
+    &.menu_{}
+          
+  }
+    
+  @media (min-width: 1200px) {
+    &.menu_home{
+
+    }
+    &.menu_{}
+    &.menu_{}
+    &.menu_{}
+          
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  @media (max-width: 576px) {background-attachment: red;
+    &>div>main{
+      padding:0 2em;
+    }
+  }
+  @media (max-width: 300px) {
+    &.menu_rider>div>main>.card{
+      padding:0 !important;
+    }
+  }
+}
+/*********************************************************************************************************************************************************************/
+/*********************************************************************************************************************************************************************/

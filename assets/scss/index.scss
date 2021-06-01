@@ -1,0 +1,353 @@
+// @import "./vendors/bootstrap/scss/bootstrap.scss";
+
+/*
+     DD SOME TRAITMENTS HERE WITH nodejs's package for instance
+     THIS FILE WOULD BE IMPORTED FROM style.scss TO build/style.css
+*/
+
+
+
+// @import './node_modules/bootstrap/scss/bootstrap.scss';
+// C:\Users\achic\myDesktop\RUBY\ocr_p7_bis\node_modules\bootstrap\scss\bootstrap.scss
+@import "./main.scss";
+/***********************************/
+/***********************************/
+/************utils******************/
+//EXTENSIONS
+//FONCTIONS
+//MIXINS
+//VARIABLES
+$MAUVE: #9356DC;
+$ROSE: #FF79DA;
+$TURQUOISE: #99E2D0;
+$WHITE: #FFF;
+$BLACK: #000;
+$GRAY: #999;
+$DARKGREY: #7c7b7b;
+$FONDGREY: #F6F6F6;
+$QUERY_MOBILE_MAX: 499px;
+$QUERY_TAB_MIN: 500px;
+$QUERY_TAB_MAX: 999px;
+$QUERY_DESKTOP_MIN:  1000px;
+$QUERY_DESKTOP_MAX: 1499px;
+/***********************************/
+/***********************************/
+/***********************************/
+/************base*******************/
+//BASE
+//NORMALIZE
+//TYPOGRAPHY
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+:root{font-family:Roboto;}
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+/***********************************/
+/***********************************/
+/************component**************/
+//BUTTONS
+/***********************************/
+/***********************************/
+/************layouts****************/
+//HEADER
+
+
+@media only screen and (max-width:600px){
+body{
+  >header{display:flex;justify-content:center;padding:1rem;box-shadow:0 0 10px 1px $GRAY;cursor:pointer;position: relative;
+  
+    }
+  }
+}
+
+/************POUR PC****************/
+body{
+  >header{display:flex;justify-content:center;padding:1rem;box-shadow:0 0 10px 1px $GRAY;cursor:pointer;position: relative;
+  
+    }
+  }
+
+
+//NAV
+
+@mixin jumbotron($color) {
+  display:flex;flex-flow: row wrap;background-color:$color ;
+  &__map{display: flex;width:100%;justify-content: center;padding: 12px 0;
+    >i{padding: 0 6px 0 0;cursor: pointer;}
+    >input{background-color: #dad8d8;border: none;text-align: center;width: 27%;font-weight: bold;}
+ }
+&__cta{width:100%;padding-bottom: 47px;background-color: $FONDGREY;
+  >h1{padding: 0 101px;text-align: center;font-size: 30px;}
+  >p{padding: 0px 105px;text-align: center;color: darkgray;}
+  >div{display: flex;width: 100%;justify-content: center;margin: 8px 0 0 0;}
+  >div>button{width: 213px;height: 43px;border-radius: 25px 25px 25px 25px;border: none;
+    background: linear-gradient(-6deg, #9356DC , #FF79DA );border-color: #f7f7f7;cursor: pointer;box-shadow: 0px 1px 3px 0px grey;}
+  >div>button>span{color: white;font-weight: bold;}
+}  
+}
+
+@mixin jumbotron__map{}
+@mixin jumbotron__cta{}
+
+.jumbotron{@include jumbotron(#dad8d8);}
+.jumbotron__map{@include jumbotron__map}
+.jumbotron__cta{@include jumbotron__cta}
+
+@media only screen and (max-width:600px){
+body{
+  >nav.jumbotron{ }
+}
+}
+
+
+
+//MAIN
+
+@mixin fonctionnement__titre {
+  padding-left: 20px;
+
+}
+
+@mixin fonctionnement__list {
+       .fa-mobile-alt{padding-left: 15px;padding-right: 15px;color:$DARKGREY;}
+       .fa-list{padding-left: 15px;padding-right: 15px;color:$DARKGREY;}
+       .fa-store{padding-left: 15px;padding-right: 15px;color:$MAUVE;}
+       .titrenav{font-weight: bold;}
+}
+
+@mixin fonctionnement {
+  &__titre{@include fonctionnement__titre;}
+  
+  &__list{@include fonctionnement__list;}
+    
+ 
+  }
+
+.fonctionnement{@include fonctionnement();
+  >ul>li{position: relative;
+    background: $FONDGREY;
+    list-style: none;
+    padding: 25px;
+    margin: 30px;
+    border-radius: 25px;
+    box-shadow: 0 0 6px 0px #F6F6F6;
+
+  }
+  >ul{
+    &.--menupage>li{
+      background-color: white;
+    }
+    &.--counter{
+      >li{
+        &::before{
+          content: "1";
+          background-color:$MAUVE;
+          width: 20px;
+          height: 20px;
+          padding: 5px;
+          border-radius: 1em;
+          position: absolute;
+          margin: -10px 0px 0px -35px;
+          text-align: center;
+          color: white;
+          font-weight: bold;
+        }
+      
+        @for $i from 1 through 3 {
+          &:nth-child(#{$i}):before{
+            content: "#{$i}";
+          }
+        }
+      }
+    }
+  }
+  }
+
+
+
+@media only screen and (max-width:600px){
+body{
+  >main.fonctionnement{}
+}
+}
+
+
+//ARTICLE
+
+
+@mixin restaurant__card {
+  position:relative;background-color:white;border-radius:10% 10% 0 0;
+}
+
+@mixin restaurant {
+  background-color: $FONDGREY;padding-bottom: 30px;
+
+  &__card{@include restaurant__card;}
+}
+.restaurant{@include restaurant();
+  >h3{padding-left: 25px;padding-top: 20px;font-size: x-large;}
+  &__card>figcaption{font-weight: bold;padding-left: 10px;padding-top: 10px;}
+  &__card>p{font-size: smaller;padding-left: 10px;padding-bottom: 10px;margin-top: 10px;}
+  &__card>span{text-decoration: none;background-color:$TURQUOISE;padding: 5px;position: absolute;top: 5%;right: 10%;color: #4b9e8f;font-weight: bold;}
+  &__card>i{position: absolute;top: 85%;right: 5%;cursor: pointer;}
+  &__card>i:before{content:"♡";}
+  &__card>i:hover:before{content:"♥";}
+  
+  &__img{width: 100%;border-radius: 10% 10% 0 0;object-fit: cover;}
+}
+
+
+@media only screen and (max-width:600px){
+  body{
+    >.restaurant{}
+  }
+  }
+
+
+//FOOTER
+
+
+@mixin PDP__omf {
+  margin-top: 0;
+  .ST{padding-top:10px;padding-left: 70px;color: $WHITE;}
+  .ST1{color: $WHITE;padding-top: 10px;padding-left: 40px;}
+  .fa-utensils{position: absolute;left: 40px;color: $WHITE;}
+  .fa-hands-helping{position: absolute;left: 40px;color: $WHITE}
+  >a{text-decoration: none;}
+}
+
+@mixin PDP {
+&__omf{@include PDP__omf;}  
+}
+
+.PDP {@include PDP();
+  background-color: #3c3c3c;padding-bottom: 10px;padding-top: 10px;
+
+
+  .titre{padding: 20Px 0px 0 35px;margin-bottom: 15px;font-family: "Shrikhand";color: white;font-size: x-large;font-weight: 100;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************/
+
+
+
+
+
+/***********************************/
+
+
+/************pages******************/
+
+  // body>header{}
+  // body>main{}
+  // body>main>section{}
+  // body>main>article{}
+  // body>footer{}
+  // body>footer>ul{}
+
+//ACCUEIL
+//MENU-1
+
+@mixin laCarte__titre {
+  font-family:"shrikhand";font-size: 35px;padding-left: 15px;
+  .fa-heart {
+    padding-left: 35px;
+}
+  
+}
+
+@mixin laCarte__entrees {
+  font-family:"roboto";padding-left: 1em;
+  
+}
+
+@mixin laCarte__plats{font-family:"roboto";padding-left: 1em;}
+
+@mixin laCarte__desserts{font-family:"roboto";padding-left: 1em;}
+
+
+@mixin laCarte {
+
+&__titre{@include laCarte__titre;}
+&__entrees{@include laCarte__entrees;}
+&__plats{@include laCarte__plats;}
+&__desserts{@include laCarte__desserts;}
+}
+
+.headerbarre_btnRetour{}
+>header>img{}
+
+>header{padding-left: 90px;}
+
+.laCarte{@include laCarte;
+  background-color: whitesmoke;
+  border-radius: 3em 3em 0 0;
+  padding: 1em;
+  margin-top: -3em;
+  position: relative;
+/*  &:before{
+    content: "";
+    border-radius: 2em 2em 0 0;
+    width: 100%;
+    height: 3em;
+    display: block;
+    position: absolute;
+    top: -3em;
+    left: 0;
+    background-color: whitesmoke;}*/
+    &__entrees{@extend .fonctionnement;}
+    &__plats{@extend .fonctionnement;}
+    &__desserts{@extend .fonctionnement;}
+}
+
+
+.bg{margin: 0;
+  >img{margin: 0;object-fit: cover;
+  }
+}
+
+.price{left: 17em;bottom: 45px;position: relative;}
+
+.commander{width: 213px;height: 43px;border-radius: 25px 25px 25px 25px;border: none;
+  background: linear-gradient(-6deg, #9356DC , #FF79DA );border-color: #f7f7f7;cursor: pointer;box-shadow: 0px 1px 3px 0px grey;
+  color: white;font-weight: bold;margin: 2em 7em 3em;
+}
+
+.underline{text-decoration: underline #3ec5ac;
+}
+
+
+.box{
+  background-color: cadetblue;position: absolute;width: 35%;height: 184px;top: 0em;right: 0em;border-radius: 0px 25px 25px 0;
+
+.fa-check-circle{
+  color: $WHITE;position: relative;left: 3.5em;top: 5em;
+}
+}
+
+
+//MENU-3
+//MENU-4
+/***********************************/
+/***********************************/
+/************themes*****************/
+
+/***********************************/
+/***********************************/
+/************vendors****************/
+
+/***********************************/
+/***********************************/
+
+
