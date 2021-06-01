@@ -14,109 +14,120 @@
 
 <header>
 
-    <button class="retour" type="retour"><i></i></button>
-    <button class="retour" type="retour"><i class="fas fa-arrow-left"></i></button>
-
     <img src="assets\images\logo\ohmyfood.png" alt="logo OH myfood" width="50%">
+    <a href="index.html" class="headerbarre__btnRetour"><i class="fas fa-arrow-left"></i></a>
 </header>
+
 <!-- MENU -->
 <main>
-
+    <figure class="bg">
     <img src="C:\Users\PC\Desktop\projet3\assets\images\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="AP" width="100%" height="250px">
-    <!-- h1+i+section.entrees>h2+(div>h3+h4+p)*3 -->
+    </figure>
+    
+    <!-- h1+i+section.entrees>h2+(li>h3+h4+p)*3 -->
 
-    <h1>La palette du goût</h1>
-    <i></i>
-    <h1>À la française</h1>
-    <i class="far fa-heart"></i>
+    <section class="laCarte">
+    <h1 class="laCarte__titre">À la française
+        <i class="far fa-heart"></i>
+    </h1>
+    
 
-    <section class="entrees">
-        <h2>ENTRÉES</h2>
-        <div>
-            <h3></h3>
-            <h4></h4>
-            <p></p>
+    <section class="laCarte__entrees">
+        <h2 class="underline">ENTRÉES</h2>
+        <ul class="--menupage">
+        <li>
+            <div class="box">
+                <i class="far fa-check-circle"></i>
+            </div>
             <h3>Tartare de poulpe acidulé</h3>
             <h4>Aux zests d'orange</h4>
             <p>25€</p>
-        </div>
-        <div>
-            <h3></h3>
-            <h4></h4>
-            <p></p>
+        </li>
+        <li>
+            <div class="box">
+                <i class="far fa-check-circle"></i>
+            </div>
             <h3>Velouté de légumes d'antan</h3>
             <h4>Carotte, panais, topinambour</h4>
             <p>35€</p>
-        </div>
-        <div>
-            <h3></h3>
-            <h4></h4>
-            <p></p>
+        </li>
+        <li>
+            <div class="box">
+                <i class="far fa-check-circle"></i>
+            </div>
             <h3>Soupe à l'oignon</h3>
             <h4>Revisitée</h4>
             <p>20€</p>
-        </div>
+        </li>
+        </ul>
     </section>
 
-    <!-- section.plats>h2+(div>h3+h4+p)*3 -->
-    <section class="plats">
-        <h2>PLATS</h2>
-        <div>
-            <h3></h3>
-            <h4></h4>
-            <p></p>
+    <!-- section.plats>h2+(li>h3+h4+p)*3 -->
+    <section class="laCarte__plats">
+        <h2 class="underline">PLATS</h2>
+        <ul class="--menupage">
+        <li>
+            <div class="box">
+                <i class="far fa-check-circle"></i>
+            </div>
             <h3>Coquilles Saint-Jacques</h3>
             <h4>Acoompagnées d'une purée de panais</h4>
             <p>40€</p>
-        </div>
-        <div>
-            <h3></h3>
-            <h4></h4>
-            <p></p>
+        </li>
+        <li>
+            <div class="box">
+                <i class="far fa-check-circle"></i>
+            </div>
             <h3>Magret de canard</h3>
             <h4>Et parmentier de pommes de terres</h4>
             <p>35€</p>
-        </div>
-        <div>
-            <h3></h3>
-            <h4></h4>
-            <p></p>
+        </li>
+        <li>
+            <div class="box">
+                <i class="far fa-check-circle"></i>
+            </div>
             <h3>Pigeonneau d'Ille-et-Vilaine</h3>
             <h4>Sur son lit de gnocchis aux légumes</h4>
             <p>44€</p>
-        </div>
+        </li>
+        </ul>
     </section>
 
-    <!-- section.desserts>h2+(div>h3+h4+p)*3 -->
-    <section class="desserts">
-        <h2>DESSERTS</h2>
-        <div>
-            <h3></h3>
-            <h4></h4>
-            <p></p>
+    <!-- section.desserts>h2+(li>h3+h4+p)*3 -->
+
+    <section class="laCarte__desserts">
+        <h2 class="underline">DESSERTS</h2>
+        <ul class="--menupage">
+        <li>
+            <div class="box">
+                <i class="far fa-check-circle"></i>
+            </div>
             <h3>Pétales de violettes glacés</h3>
             <h4>Et purée de noisettes</h4>
             <p>18€</p>
-        </div>
-        <div>
-            <h3></h3>
-            <h4></h4>
-            <p></p>
+        </li>
+        <li>
+            <div class="box">
+                <i class="far fa-check-circle"></i>
+            </div>
             <h3>Fondant aux chocolat</h3>
             <h4>Revisité</h4>
             <p>22€</p>
-        </div>
-        <div>
-            <h3></h3>
-            <h4></h4>
-            <p></p>
+        </li>
+        <li>
+            <div class="box">
+                <i class="far fa-check-circle"></i>
+            </div>
             <h3>Millefeuille croustillant</h3>
             <h4>Myrtilles et pâte d'amande</h4>
             <p>23€</p>
-        </div>
+        </li>
+        </ul>
     </section>
 
-      <!-- FOOTER -->
+    <button class="commander" type="commander">Commander</button>
+
+     <!-- FOOTER -->
 
     <!-- footer>h3+(ul>li>i)*2+(li)*2 -->
 
@@ -130,8 +141,8 @@
                 <i class="fas fa-hands-helping"></i>
             </li>
             <li class="ST1">Mentions légales</li>
-            <li class="ST1">Contact</li>
-         </ul>
+            <li class="ST1"><a href="mailto:meline.ms@hotmail.fr">Contact</a></li>
+        </ul>
     </footer>
     <!-- FOOTER -->
     

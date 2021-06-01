@@ -356,7 +356,122 @@ ul {
 
 /**/
 /**/
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  padding: 0;
+}
+
+.headerbarre__btnRetour {
+  color: black;
+  position: relative;
+  right: 16em;
+  top: 10px;
+}
+
+.commander {
+  width: 213px;
+  height: 43px;
+  border-radius: 25px 25px 25px 25px;
+  border: none;
+  background: linear-gradient(-6deg, #9356DC, #FF79DA);
+  border-color: #f7f7f7;
+  cursor: pointer;
+  box-shadow: 0px 1px 3px 0px grey;
+  color: white;
+  font-weight: bold;
+  margin-left: 7em;
+}
+
 /**/
+#loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  animation: ok 3s linear 1;
+  z-index: -1;
+  opacity: 0;
+}
+
+@keyframes ok {
+  from {
+    z-index: 1;
+    opacity: 1;
+  }
+  to {
+    z-index: -1;
+    opacity: 0;
+  }
+}
+.loader {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  perspective: 800px;
+}
+
+.loader__inner {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.loader__inner.one {
+  left: 0%;
+  top: 0%;
+  animation: rotate-one 1s linear infinite;
+  border-bottom: 3px solid #EFEFFA;
+}
+
+.loader__inner.two {
+  right: 0%;
+  top: 0%;
+  animation: rotate-two 1s linear infinite;
+  border-right: 3px solid #EFEFFA;
+}
+
+.loader__inner.three {
+  right: 0%;
+  bottom: 0%;
+  animation: rotate-three 1s linear infinite;
+  border-top: 3px solid #EFEFFA;
+}
+
+@keyframes rotate-one {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+@keyframes rotate-two {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+@keyframes rotate-three {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
 /**/
 /* ooo */
 /**/
@@ -452,7 +567,7 @@ body > header {
   background: linear-gradient(-6deg, #9356DC, #FF79DA);
   border-color: #f7f7f7;
   cursor: pointer;
-  box-shadow: inset 0px 1px 10px 0px grey;
+  box-shadow: 0px 1px 3px 0px grey;
 }
 .jumbotron__cta > div > button > span {
   color: white;
@@ -480,7 +595,7 @@ body > header {
 .fonctionnement__list .titrenav {
   font-weight: bold;
 }
-.fonctionnement > ul > li {
+.fonctionnement > ul > li, .laCarte__desserts > ul > li, .laCarte__plats > ul > li, .laCarte__entrees > ul > li {
   position: relative;
   background: #F6F6F6;
   list-style: none;
@@ -489,7 +604,10 @@ body > header {
   border-radius: 25px;
   box-shadow: 0 0 6px 0px #F6F6F6;
 }
-.fonctionnement > ul > li::before {
+.fonctionnement > ul.--menupage > li, .laCarte__desserts > ul.--menupage > li, .laCarte__plats > ul.--menupage > li, .laCarte__entrees > ul.--menupage > li {
+  background-color: white;
+}
+.fonctionnement > ul.--counter > li::before, .laCarte__desserts > ul.--counter > li::before, .laCarte__plats > ul.--counter > li::before, .laCarte__entrees > ul.--counter > li::before {
   content: "1";
   background-color: #9356DC;
   width: 20px;
@@ -502,13 +620,13 @@ body > header {
   color: white;
   font-weight: bold;
 }
-.fonctionnement > ul > li:nth-child(1):before {
+.fonctionnement > ul.--counter > li:nth-child(1):before, .laCarte__desserts > ul.--counter > li:nth-child(1):before, .laCarte__plats > ul.--counter > li:nth-child(1):before, .laCarte__entrees > ul.--counter > li:nth-child(1):before {
   content: "1";
 }
-.fonctionnement > ul > li:nth-child(2):before {
+.fonctionnement > ul.--counter > li:nth-child(2):before, .laCarte__desserts > ul.--counter > li:nth-child(2):before, .laCarte__plats > ul.--counter > li:nth-child(2):before, .laCarte__entrees > ul.--counter > li:nth-child(2):before {
   content: "2";
 }
-.fonctionnement > ul > li:nth-child(3):before {
+.fonctionnement > ul.--counter > li:nth-child(3):before, .laCarte__desserts > ul.--counter > li:nth-child(3):before, .laCarte__plats > ul.--counter > li:nth-child(3):before, .laCarte__entrees > ul.--counter > li:nth-child(3):before {
   content: "3";
 }
 
@@ -575,12 +693,13 @@ body > header {
 }
 .PDP__omf .ST {
   padding-top: 10px;
-  padding-left: 25px;
+  padding-left: 70px;
   color: #FFF;
 }
 .PDP__omf .ST1 {
   color: #FFF;
   padding-top: 10px;
+  padding-left: 40px;
 }
 .PDP__omf .fa-utensils {
   position: absolute;
@@ -611,11 +730,89 @@ body > header {
   padding-left: 90px;
 }
 
+.laCarte {
+  background-color: whitesmoke;
+  border-radius: 3em 3em 0 0;
+  padding: 1em;
+  margin-top: -3em;
+  position: relative;
+  /*  &:before{
+      content: "";
+      border-radius: 2em 2em 0 0;
+      width: 100%;
+      height: 3em;
+      display: block;
+      position: absolute;
+      top: -3em;
+      left: 0;
+      background-color: whitesmoke;}*/
+}
+.laCarte__titre {
+  font-family: "shrikhand";
+  font-size: 35px;
+  padding-left: 15px;
+}
+.laCarte__titre .fa-heart {
+  padding-left: 35px;
+}
+.laCarte__entrees {
+  font-family: "roboto";
+  padding-left: 1em;
+}
+.laCarte__plats {
+  font-family: "roboto";
+  padding-left: 1em;
+}
+.laCarte__desserts {
+  font-family: "roboto";
+  padding-left: 1em;
+}
 .bg {
   margin: 0;
 }
 .bg > img {
   margin: 0;
+  object-fit: cover;
+}
+
+.price {
+  left: 17em;
+  bottom: 45px;
+  position: relative;
+}
+
+.commander {
+  width: 213px;
+  height: 43px;
+  border-radius: 25px 25px 25px 25px;
+  border: none;
+  background: linear-gradient(-6deg, #9356DC, #FF79DA);
+  border-color: #f7f7f7;
+  cursor: pointer;
+  box-shadow: 0px 1px 3px 0px grey;
+  color: white;
+  font-weight: bold;
+  margin: 2em 7em 3em;
+}
+
+.underline {
+  text-decoration: underline #3ec5ac;
+}
+
+.box {
+  background-color: cadetblue;
+  position: absolute;
+  width: 35%;
+  height: 184px;
+  top: 0em;
+  right: 0em;
+  border-radius: 0px 25px 25px 0;
+}
+.box .fa-check-circle {
+  color: #FFF;
+  position: relative;
+  left: 3.5em;
+  top: 5em;
 }
 
 /***********************************/
