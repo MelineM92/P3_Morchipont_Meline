@@ -190,8 +190,8 @@ body{
   &__card>p{font-size: smaller;padding-left: 10px;padding-bottom: 10px;margin-top: 10px;}
   &__card>span{text-decoration: none;background-color:$TURQUOISE;padding: 5px;position: absolute;top: 5%;right: 10%;color: #4b9e8f;font-weight: bold;}
   &__card>i{position: absolute;top: 85%;right: 5%;cursor: pointer;}
-  &__card>i:before{content:"♡";}
-  &__card>i:hover:before{content:"♥";}
+  &__card>i:before{content:"🤍";}
+  &__card>i:hover:before{content:"💜";}
   
   &__img{width: 100%;border-radius: 10% 10% 0 0;object-fit: cover;}
 }
@@ -267,22 +267,15 @@ body{
   
 }
 
-@mixin laCarte__entrees {
-  font-family:"roboto";padding-left: 1em;
-  
-}
 
 @mixin laCarte__plats{font-family:"roboto";padding-left: 1em;}
-
-@mixin laCarte__desserts{font-family:"roboto";padding-left: 1em;}
 
 
 @mixin laCarte {
 
 &__titre{@include laCarte__titre;}
-&__entrees{@include laCarte__entrees;}
 &__plats{@include laCarte__plats;}
-&__desserts{@include laCarte__desserts;}
+
 }
 
 .headerbarre_btnRetour{}
@@ -296,19 +289,25 @@ body{
   padding: 1em;
   margin-top: -3em;
   position: relative;
-/*  &:before{
-    content: "";
-    border-radius: 2em 2em 0 0;
-    width: 100%;
-    height: 3em;
-    display: block;
-    position: absolute;
-    top: -3em;
-    left: 0;
-    background-color: whitesmoke;}*/
-    &__entrees{@extend .fonctionnement;}
-    &__plats{@extend .fonctionnement;}
-    &__desserts{@extend .fonctionnement;}
+
+    &__plats{@extend .fonctionnement;
+    >ul>li{
+      list-style: none;
+    margin: 20px;
+    position: relative;
+    padding: 2em;
+    border-radius: 30px;
+    box-shadow: 1px 2px 5px lightgrey;
+    
+    }
+    > ul > li div {
+      display: flex;
+    }
+
+    >ul>li>div>h4{padding-left: 2em;}
+
+  }
+   
 }
 
 
@@ -317,7 +316,16 @@ body{
   }
 }
 
-.price{left: 17em;bottom: 45px;position: relative;}
+
+
+
+
+
+.titrenav2{position: relative;bottom: 1em;}
+
+.price{    margin: 21px 20PX;
+  font-weight: bold;
+  font-size: medium;}
 
 .commander{width: 213px;height: 43px;border-radius: 25px 25px 25px 25px;border: none;
   background: linear-gradient(-6deg, #9356DC , #FF79DA );border-color: #f7f7f7;cursor: pointer;box-shadow: 0px 1px 3px 0px grey;
@@ -327,14 +335,55 @@ body{
 .underline{text-decoration: underline #3ec5ac;
 }
 
+.laCarte__plats li {
+  overflow: hidden;
+}
 
 .box{
-  background-color: cadetblue;position: absolute;width: 35%;height: 184px;top: 0em;right: 0em;border-radius: 0px 25px 25px 0;
+  position: absolute;
+  align-items: flex-end;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rebeccapurple;
+  border-radius: 30px;
 
-.fa-check-circle{
-  color: $WHITE;position: relative;left: 3.5em;top: 5em;
+  &::before {
+    content: "\2713";
+    position: absolute;
+    right: -2em;
+    top: 30%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 2em;
+    color: green;
+    transition: transform .4s, right .4s;
+    border: solid green;
+    border-radius: 2em;
 }
+  &::after {
+    content: "";
+    width: 0px;
+    height: 100%;
+    right: 0;
+    transition: width .4s;
+    background: turquoise;
+    border-radius: 0 30px 30px 0;
+    position: absolute;
+  }
+
 }
+
+.laCarte__plats > ul > li:hover>div:before {
+  right: 5%;
+  z-index: 1 ;}
+
+.laCarte__plats > ul > li:hover>div:after {
+    background: cadetblue;
+  width: 100px;}
+
 
 
 //MENU-3

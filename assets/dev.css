@@ -595,7 +595,7 @@ body > header {
 .fonctionnement__list .titrenav {
   font-weight: bold;
 }
-.fonctionnement > ul > li, .laCarte__desserts > ul > li, .laCarte__plats > ul > li, .laCarte__entrees > ul > li {
+.fonctionnement > ul > li, .laCarte__plats > ul > li {
   position: relative;
   background: #F6F6F6;
   list-style: none;
@@ -604,10 +604,10 @@ body > header {
   border-radius: 25px;
   box-shadow: 0 0 6px 0px #F6F6F6;
 }
-.fonctionnement > ul.--menupage > li, .laCarte__desserts > ul.--menupage > li, .laCarte__plats > ul.--menupage > li, .laCarte__entrees > ul.--menupage > li {
+.fonctionnement > ul.--menupage > li, .laCarte__plats > ul.--menupage > li {
   background-color: white;
 }
-.fonctionnement > ul.--counter > li::before, .laCarte__desserts > ul.--counter > li::before, .laCarte__plats > ul.--counter > li::before, .laCarte__entrees > ul.--counter > li::before {
+.fonctionnement > ul.--counter > li::before, .laCarte__plats > ul.--counter > li::before {
   content: "1";
   background-color: #9356DC;
   width: 20px;
@@ -620,13 +620,13 @@ body > header {
   color: white;
   font-weight: bold;
 }
-.fonctionnement > ul.--counter > li:nth-child(1):before, .laCarte__desserts > ul.--counter > li:nth-child(1):before, .laCarte__plats > ul.--counter > li:nth-child(1):before, .laCarte__entrees > ul.--counter > li:nth-child(1):before {
+.fonctionnement > ul.--counter > li:nth-child(1):before, .laCarte__plats > ul.--counter > li:nth-child(1):before {
   content: "1";
 }
-.fonctionnement > ul.--counter > li:nth-child(2):before, .laCarte__desserts > ul.--counter > li:nth-child(2):before, .laCarte__plats > ul.--counter > li:nth-child(2):before, .laCarte__entrees > ul.--counter > li:nth-child(2):before {
+.fonctionnement > ul.--counter > li:nth-child(2):before, .laCarte__plats > ul.--counter > li:nth-child(2):before {
   content: "2";
 }
-.fonctionnement > ul.--counter > li:nth-child(3):before, .laCarte__desserts > ul.--counter > li:nth-child(3):before, .laCarte__plats > ul.--counter > li:nth-child(3):before, .laCarte__entrees > ul.--counter > li:nth-child(3):before {
+.fonctionnement > ul.--counter > li:nth-child(3):before, .laCarte__plats > ul.--counter > li:nth-child(3):before {
   content: "3";
 }
 
@@ -672,10 +672,10 @@ body > header {
   cursor: pointer;
 }
 .restaurant__card > i:before {
-  content: "♡";
+  content: "🤍";
 }
 .restaurant__card > i:hover:before {
-  content: "♥";
+  content: "💜";
 }
 .restaurant__img {
   width: 100%;
@@ -736,16 +736,6 @@ body > header {
   padding: 1em;
   margin-top: -3em;
   position: relative;
-  /*  &:before{
-      content: "";
-      border-radius: 2em 2em 0 0;
-      width: 100%;
-      height: 3em;
-      display: block;
-      position: absolute;
-      top: -3em;
-      left: 0;
-      background-color: whitesmoke;}*/
 }
 .laCarte__titre {
   font-family: "shrikhand";
@@ -755,18 +745,25 @@ body > header {
 .laCarte__titre .fa-heart {
   padding-left: 35px;
 }
-.laCarte__entrees {
-  font-family: "roboto";
-  padding-left: 1em;
-}
 .laCarte__plats {
   font-family: "roboto";
   padding-left: 1em;
 }
-.laCarte__desserts {
-  font-family: "roboto";
-  padding-left: 1em;
+.laCarte__plats > ul > li {
+  list-style: none;
+  margin: 20px;
+  position: relative;
+  padding: 2em;
+  border-radius: 30px;
+  box-shadow: 1px 2px 5px lightgrey;
 }
+.laCarte__plats > ul > li div {
+  display: flex;
+}
+.laCarte__plats > ul > li > div > h4 {
+  padding-left: 2em;
+}
+
 .bg {
   margin: 0;
 }
@@ -775,10 +772,15 @@ body > header {
   object-fit: cover;
 }
 
-.price {
-  left: 17em;
-  bottom: 45px;
+.titrenav2 {
   position: relative;
+  bottom: 1em;
+}
+
+.price {
+  margin: 21px 20PX;
+  font-weight: bold;
+  font-size: medium;
 }
 
 .commander {
@@ -799,20 +801,53 @@ body > header {
   text-decoration: underline #3ec5ac;
 }
 
-.box {
-  background-color: cadetblue;
-  position: absolute;
-  width: 35%;
-  height: 184px;
-  top: 0em;
-  right: 0em;
-  border-radius: 0px 25px 25px 0;
+.laCarte__plats li {
+  overflow: hidden;
 }
-.box .fa-check-circle {
-  color: #FFF;
-  position: relative;
-  left: 3.5em;
-  top: 5em;
+
+.box {
+  position: absolute;
+  align-items: flex-end;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rebeccapurple;
+  border-radius: 30px;
+}
+.box::before {
+  content: "✓";
+  position: absolute;
+  right: -2em;
+  top: 30%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 2em;
+  color: green;
+  transition: transform 0.4s, right 0.4s;
+  border: solid green;
+  border-radius: 2em;
+}
+.box::after {
+  content: "";
+  width: 0px;
+  height: 100%;
+  right: 0;
+  transition: width 0.4s;
+  background: turquoise;
+  border-radius: 0 30px 30px 0;
+  position: absolute;
+}
+
+.laCarte__plats > ul > li:hover > div:before {
+  right: 5%;
+  z-index: 1;
+}
+
+.laCarte__plats > ul > li:hover > div:after {
+  background: cadetblue;
+  width: 100px;
 }
 
 /***********************************/
