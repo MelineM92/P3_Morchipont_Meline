@@ -1,7 +1,21 @@
 /**/
 a{text-decoration: none;color:white;}
+
 ul{padding: 0;}
-.headerbarre__btnRetour{color: black;position: relative;right: 16em;top: 10px;}
-.commander{width: 213px;height: 43px;border-radius: 25px 25px 25px 25px;border: none;
-    background: linear-gradient(-6deg, #9356DC , #FF79DA );border-color: #f7f7f7;cursor: pointer;box-shadow: 0px 1px 3px 0px grey;
-    color: white;font-weight: bold;margin-left: 7em;}
+
+.headerbarre__btnRetour{color: black;
+    position: relative;
+    right: 16em;
+    top: 10px;}
+
+.commander{width: 213px;
+    height: 43px;
+    border-radius: 25px 25px 25px 25px;
+    border: none;
+    background: linear-gradient(-6deg, #9356DC , #FF79DA );
+    border-color: #f7f7f7;cursor: pointer;
+    box-shadow: 0px 1px 3px 0px grey;
+    color: white;
+    font-weight: bold;
+    margin-left: 7em;}
+

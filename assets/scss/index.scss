@@ -268,7 +268,9 @@ body{
 }
 
 
-@mixin laCarte__plats{font-family:"roboto";padding-left: 1em;}
+@mixin laCarte__plats{
+  font-family:"roboto";
+  padding-left: 1em;}
 
 
 @mixin laCarte {
@@ -304,7 +306,12 @@ body{
       display: flex;
     }
 
-    >ul>li>div>h4{padding-left: 2em;}
+    >ul>li>div>h4{padding-left: 2em;
+      font-weight: 300;
+      width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-bottom: 0.5em;}
 
   }
    
@@ -316,24 +323,48 @@ body{
   }
 }
 
+.laCarte__titre > i:hover::before {
+  content: "💜";}
 
-
-
+.--menupage{
+  animation: animationMenu 1s ease-in 1;
+  overflow: hidden;}
 
 
 .titrenav2{position: relative;bottom: 1em;}
 
 .price{    margin: 21px 20PX;
   font-weight: bold;
-  font-size: medium;}
+  font-size: medium;
+  right: 20px;
+  bottom: 0px;
+  display: inline-block;
+  height: 40px;
+  transition: 400ms;
+  padding-right: 1rem;}
 
-.commander{width: 213px;height: 43px;border-radius: 25px 25px 25px 25px;border: none;
-  background: linear-gradient(-6deg, #9356DC , #FF79DA );border-color: #f7f7f7;cursor: pointer;box-shadow: 0px 1px 3px 0px grey;
-  color: white;font-weight: bold;margin: 2em 7em 3em;
+.commander{
+  width: 213px;
+  height: 43px;
+  border-radius: 25px 25px 25px 25px;
+  border: none;
+  background: linear-gradient(-6deg, #9356DC , #FF79DA );
+  border-color: #f7f7f7;cursor: pointer;
+  box-shadow: 0px 1px 3px 0px grey;
+  color: white;
+  font-weight: bold;
+  margin: 2em 7em 3em;
 }
 
-.underline{text-decoration: underline #3ec5ac;
-}
+
+.laCarte__plats > h2.underline::after {
+  background-color: #99e2d0;
+  content: "";
+  height: 3px;
+  width: 3em;
+  top: 130px;
+  left: 33px;
+  position: absolute;}
 
 .laCarte__plats li {
   overflow: hidden;
@@ -346,7 +377,6 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rebeccapurple;
   border-radius: 30px;
 
   &::before {
@@ -354,14 +384,18 @@ body{
     position: absolute;
     right: -2em;
     top: 30%;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     text-align: center;
     font-size: 2em;
-    color: green;
-    transition: transform .4s, right .4s;
-    border: solid green;
+    color: $TURQUOISE;
+    transition: transform 0.4s ease 0s, right 0.4s ease 0s;
+    border: solid $WHITE;
+    background-color: $WHITE;
     border-radius: 2em;
+    border-width: initial;
+    border-image: initial;
+    cursor: pointer;
 }
   &::after {
     content: "";
@@ -369,9 +403,10 @@ body{
     height: 100%;
     right: 0;
     transition: width .4s;
-    background: turquoise;
+    background: $TURQUOISE;
     border-radius: 0 30px 30px 0;
-    position: absolute;
+    position: relative;
+    cursor: pointer;
   }
 
 }
@@ -381,16 +416,23 @@ body{
   z-index: 1 ;}
 
 .laCarte__plats > ul > li:hover>div:after {
-    background: cadetblue;
-  width: 100px;}
+  background: $TURQUOISE;
+  width: 200px;}
 
 
 
-//MENU-3
-//MENU-4
+
 /***********************************/
 /***********************************/
-/************themes*****************/
+/************MEDIA QUERIES*****************/
+
+@media only screen and (max-width: $QUERY_MOBILE_MAX) {
+ 
+@media only screen and (min-width: $QUERY_TAB_MIN) and (max-width: $QUERY_TAB_MAX) {
+ 
+}
+@media only screen and (min-width: $QUERY_DESKTOP_MIN) and (max-width: $QUERY_DESKTOP_MAX) {
+ 
 
 /***********************************/
 /***********************************/
