@@ -295,7 +295,7 @@ body{
     &__plats{@extend .fonctionnement;
     >ul>li{
       list-style: none;
-    margin: 20px;
+    margin: 20px 0;
     position: relative;
     padding: 2em;
     border-radius: 30px;
@@ -323,6 +323,9 @@ body{
   }
 }
 
+.laCarte__titre>i::before{
+  content: "🤍";
+}
 .laCarte__titre > i:hover::before {
   content: "💜";}
 
@@ -344,6 +347,7 @@ body{
   padding-right: 1rem;}
 
 .commander{
+  display: block;
   width: 213px;
   height: 43px;
   border-radius: 25px 25px 25px 25px;
@@ -353,7 +357,7 @@ body{
   box-shadow: 0px 1px 3px 0px grey;
   color: white;
   font-weight: bold;
-  margin: 2em 7em 3em;
+  margin: auto;
 }
 
 
@@ -427,12 +431,14 @@ body{
 /************MEDIA QUERIES*****************/
 
 @media only screen and (max-width: $QUERY_MOBILE_MAX) {
+
+}
  
 @media only screen and (min-width: $QUERY_TAB_MIN) and (max-width: $QUERY_TAB_MAX) {
  
 }
 @media only screen and (min-width: $QUERY_DESKTOP_MIN) and (max-width: $QUERY_DESKTOP_MAX) {
- 
+}
 
 /***********************************/
 /***********************************/
