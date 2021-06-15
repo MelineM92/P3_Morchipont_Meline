@@ -1,14 +1,24 @@
 /**/
-a{text-decoration: none;color:white;}
+a{
+    text-decoration: none;
+    color: white;}
 
-ul{padding: 0;}
+.--menupage{
+    animation: animationMenu 2s ease-in 1;
+    overflow: hidden;}
 
-.headerbarre__btnRetour{color: black;
+ul{
+    padding: 0;}
+
+.headerbarre__btnRetour{
+    color: black;
     position: relative;
-    right: 16em;
-    top: 10px;}
+    right: 20em;
+    top: 15px;}
 
-.commander{width: 213px;
+.commander{ 
+    display: block;
+    width: 213px;
     height: 43px;
     border-radius: 25px 25px 25px 25px;
     border: none;
@@ -17,5 +27,6 @@ ul{padding: 0;}
     box-shadow: 0px 1px 3px 0px grey;
     color: white;
     font-weight: bold;
-    margin-left: 7em;}
+    margin: auto;
+    margin-bottom: 3em;}
 

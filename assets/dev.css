@@ -361,6 +361,11 @@ a {
   color: white;
 }
 
+.--menupage {
+  animation: animationMenu 2s ease-in 1;
+  overflow: hidden;
+}
+
 ul {
   padding: 0;
 }
@@ -368,11 +373,12 @@ ul {
 .headerbarre__btnRetour {
   color: black;
   position: relative;
-  right: 16em;
-  top: 10px;
+  right: 20em;
+  top: 15px;
 }
 
 .commander {
+  display: block;
   width: 213px;
   height: 43px;
   border-radius: 25px 25px 25px 25px;
@@ -383,7 +389,8 @@ ul {
   box-shadow: 0px 1px 3px 0px grey;
   color: white;
   font-weight: bold;
-  margin-left: 7em;
+  margin: auto;
+  margin-bottom: 3em;
 }
 
 /**/
@@ -491,16 +498,6 @@ ul {
 }
 
 /***********************************/
-@media only screen and (max-width: 600px) {
-  body > header {
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    box-shadow: 0 0 10px 1px #999;
-    cursor: pointer;
-    position: relative;
-  }
-}
 /************POUR mobile****************/
 body > header {
   display: flex;
@@ -852,27 +849,6 @@ body > header {
     height: 400px;
   }
 }
-.--menupage {
-  animation: animationMenu 2s ease-in 1;
-  overflow: hidden;
-}
-
-.commander {
-  display: block;
-  width: 213px;
-  height: 43px;
-  border-radius: 25px 25px 25px 25px;
-  border: none;
-  background: linear-gradient(-6deg, #9356DC, #FF79DA);
-  border-color: #f7f7f7;
-  cursor: pointer;
-  box-shadow: 0px 1px 3px 0px grey;
-  color: white;
-  font-weight: bold;
-  margin: auto;
-  margin-bottom: 3em;
-}
-
 .laCarte__plats > ul > li:hover > div:before {
   right: 5%;
   z-index: 1;
@@ -884,6 +860,36 @@ body > header {
 }
 
 /************MEDIA QUERIES*****************/
+@media only screen and (min-width: 500px) and (max-width: 999px) {
+  .fonctionnement, .laCarte__plats {
+    display: flex;
+    justify-content: center;
+  }
+  .fonctionnement__titre {
+    position: absolute;
+  }
+  .fonctionnement__list {
+    padding-top: 2em;
+  }
+
+  .restaurant {
+    text-align: -webkit-center;
+    padding-top: 1em;
+  }
+  .restaurant > h3 {
+    padding-top: 0;
+    margin: 0;
+  }
+  .restaurant__card {
+    padding: 0em;
+    margin-top: 2em;
+    width: 70%;
+    height: 20em;
+  }
+  .restaurant__img {
+    height: 15em;
+  }
+}
 /***********************************/
 /***********************************/
 /************vendors****************/
