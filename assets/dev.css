@@ -361,36 +361,8 @@ a {
   color: white;
 }
 
-.--menupage {
-  animation: animationMenu 2s ease-in 1;
-  overflow: hidden;
-}
-
 ul {
   padding: 0;
-}
-
-.headerbarre__btnRetour {
-  color: black;
-  position: relative;
-  right: 20em;
-  top: 15px;
-}
-
-.commander {
-  display: block;
-  width: 213px;
-  height: 43px;
-  border-radius: 25px 25px 25px 25px;
-  border: none;
-  background: linear-gradient(-6deg, #9356DC, #FF79DA);
-  border-color: #f7f7f7;
-  cursor: pointer;
-  box-shadow: 0px 1px 3px 0px grey;
-  color: white;
-  font-weight: bold;
-  margin: auto;
-  margin-bottom: 3em;
 }
 
 /**/
@@ -499,13 +471,22 @@ ul {
 
 /***********************************/
 /************POUR mobile****************/
-body > header {
+.headerbarre {
   display: flex;
   justify-content: center;
   padding: 1rem;
   box-shadow: 0 0 10px 1px #999;
   cursor: pointer;
   position: relative;
+}
+.headerbarre__btnRetour {
+  color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
 
 .jumbotron {
@@ -598,6 +579,7 @@ body > header {
 }
 .fonctionnement > ul.--menupage > li, .laCarte__plats > ul.--menupage > li {
   background-color: white;
+  overflow: hidden;
 }
 .fonctionnement > ul.--counter > li::before, .laCarte__plats > ul.--counter > li::before {
   content: "1";
@@ -767,6 +749,10 @@ body > header {
 .laCarte__plats > li {
   overflow: hidden;
 }
+.laCarte__plats > ul {
+  animation: animationMenu 2s ease-in 1;
+  overflow: hidden;
+}
 .laCarte__plats > ul > li {
   list-style: none;
   margin: 20px 0;
@@ -774,6 +760,7 @@ body > header {
   padding: 2em;
   border-radius: 30px;
   box-shadow: 1px 2px 5px lightgrey;
+  background-color: #FFF;
 }
 .laCarte__plats > ul > li > h3 {
   position: relative;
@@ -840,6 +827,21 @@ body > header {
   margin-bottom: 0.5em;
   overflow: hidden;
 }
+.laCarte__commander {
+  display: block;
+  width: 213px;
+  height: 43px;
+  border-radius: 25px 25px 25px 25px;
+  border: none;
+  background: linear-gradient(-6deg, #9356DC, #FF79DA);
+  border-color: #f7f7f7;
+  cursor: pointer;
+  box-shadow: 0px 1px 3px 0px grey;
+  color: white;
+  font-weight: bold;
+  margin: auto;
+  margin-bottom: 3em;
+}
 
 @keyframes animationMenu {
   0% {
@@ -860,7 +862,7 @@ body > header {
 }
 
 /************MEDIA QUERIES*****************/
-@media only screen and (min-width: 500px) and (max-width: 999px) {
+@media only screen and (min-width: 501px) and (max-width: 999px) {
   .fonctionnement, .laCarte__plats {
     display: flex;
     justify-content: center;
@@ -874,20 +876,90 @@ body > header {
 
   .restaurant {
     text-align: -webkit-center;
-    padding-top: 1em;
+    padding-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    position: relative;
   }
   .restaurant > h3 {
     padding-top: 0;
     margin: 0;
+    position: absolute;
+    top: 1em;
   }
   .restaurant__card {
     padding: 0em;
     margin-top: 2em;
-    width: 70%;
-    height: 20em;
+    width: calc(50% - 5em);
   }
   .restaurant__img {
     height: 15em;
+  }
+
+  .laCarte__plats {
+    position: relative;
+    padding-top: 3em;
+    margin-top: 2em;
+  }
+  .laCarte__plats > h2 {
+    width: 115px;
+    position: absolute !important;
+    top: 1em;
+  }
+  .laCarte__plats > ul > li {
+    width: 333px;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1499px) {
+  .fonctionnement, .laCarte__plats {
+    display: flex;
+    justify-content: center;
+  }
+  .fonctionnement__titre {
+    position: absolute;
+  }
+  .fonctionnement__list {
+    padding-top: 2em;
+  }
+
+  .restaurant {
+    text-align: -webkit-center;
+    padding-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    position: relative;
+  }
+  .restaurant > h3 {
+    padding-top: 0;
+    margin: 0;
+    position: absolute;
+    top: 1em;
+  }
+  .restaurant__card {
+    padding: 0em;
+    margin-top: 2em;
+    width: calc(50% - 5em);
+  }
+  .restaurant__img {
+    height: 15em;
+  }
+
+  .laCarte__plats {
+    position: relative;
+    padding-top: 3em;
+    margin-top: 2em;
+  }
+  .laCarte__plats > h2 {
+    width: 115px;
+    position: absolute !important;
+    top: 1em;
+  }
+  .laCarte__plats > ul > li {
+    width: 333px;
   }
 }
 /***********************************/

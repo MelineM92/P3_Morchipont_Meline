@@ -25,8 +25,8 @@ $BLACK: #000;
 $GRAY: #999;
 $DARKGREY: #7c7b7b;
 $FONDGREY: #F6F6F6;
-$QUERY_MOBILE_MAX: 499px;
-$QUERY_TAB_MIN: 500px;
+$QUERY_MOBILE_MAX: 500px;
+$QUERY_TAB_MIN: 501px;
 $QUERY_TAB_MAX: 999px;
 $QUERY_DESKTOP_MIN:  1000px;
 $QUERY_DESKTOP_MAX: 1499px;
@@ -51,8 +51,8 @@ $QUERY_DESKTOP_MAX: 1499px;
 
 //HEADER
 
-body{
-  >header{
+
+  .headerbarre{
     display:flex;
     justify-content:center;
     padding:1rem;
@@ -60,8 +60,19 @@ body{
     cursor:pointer;
     position: relative;
   
-    }
+  
+
+    &__btnRetour{
+      color: black;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      height: 100%;
+      align-items: center;}
+
   }
+  
 
 
 //NAV
@@ -197,6 +208,8 @@ body{
   >ul{
     &.--menupage>li{
       background-color: white;
+      overflow: hidden;
+
     }
     &.--counter{
       >li{
@@ -293,11 +306,7 @@ body{
 }
 
 
-@media only screen and (max-width:600px){
-  body{
-    >.restaurant{}
-  }
-  }
+
 
 
 //FOOTER
@@ -421,6 +430,9 @@ body{
 
     &__plats{@extend .fonctionnement;
     >ul{
+        animation: animationMenu 2s ease-in 1;
+        overflow: hidden;
+
       >li{
         list-style: none;
         margin: 20px 0;
@@ -428,6 +440,7 @@ body{
         padding: 2em;
         border-radius: 30px;
         box-shadow: 1px 2px 5px lightgrey;
+        background-color: $WHITE;
 
         >h3{
           position: relative;
@@ -502,7 +515,19 @@ body{
     }
 
   }
-   
+  &__commander{ 
+    display: block;
+    width: 213px;
+    height: 43px;
+    border-radius: 25px 25px 25px 25px;
+    border: none;
+    background: linear-gradient(-6deg, #9356DC , #FF79DA );
+    border-color: #f7f7f7;cursor: pointer;
+    box-shadow: 0px 1px 3px 0px grey;
+    color: white;
+    font-weight: bold;
+    margin: auto;
+    margin-bottom: 3em;}
 }
 
 
@@ -534,7 +559,9 @@ body{
 }
  
 @media only screen and (min-width: $QUERY_TAB_MIN) and (max-width: $QUERY_TAB_MAX) {
- .fonctionnement{
+ 
+ 
+  .fonctionnement{
   display: flex;
   justify-content: center;
  
@@ -550,29 +577,110 @@ body{
  
 .restaurant{
   text-align: -webkit-center;
-  padding-top: 1em;
+    padding-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    position: relative;
 
 >h3{
   padding-top: 0;
-  margin:0;
+    margin: 0;
+    position: absolute;
+    top:1em;
 }
   
   &__card{
     padding: 0em;
     margin-top: 2em;
-    width: 70%;
-    height: 20em;
+    width: calc(50% - 5em);
   }
 
   &__img{
     height: 15em;
   }
   }
+
+  .laCarte__plats{
+    position: relative;
+    padding-top: 3em;
+    margin-top: 2em;
+
+    >h2{
+      width: 115px;
+      position: absolute !important;
+      top:1em;
+    }
+
+    >ul>li{
+      width: 333px;
+    }
+  }
 }
 
 
 @media only screen and (min-width: $QUERY_DESKTOP_MIN) and (max-width: $QUERY_DESKTOP_MAX) {
+  .fonctionnement{
+    display: flex;
+    justify-content: center;
+   
+  
+   &__titre{
+     position: absolute;}
+  
+    &__list{
+      padding-top: 2em;
+    }
+  
+    }
+   
+  .restaurant{
+    text-align: -webkit-center;
+      padding-top: 3em;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-around;
+      justify-content: space-around;
+      position: relative;
+  
+  >h3{
+    padding-top: 0;
+      margin: 0;
+      position: absolute;
+      top:1em;
+  }
+    
+    &__card{
+      padding: 0em;
+      margin-top: 2em;
+      width: calc(50% - 5em);
+    }
+  
+    &__img{
+      height: 15em;
+    }
+    }
+  
+    .laCarte__plats{
+      position: relative;
+      padding-top: 3em;
+      margin-top: 2em;
+  
+      >h2{
+        width: 115px;
+        position: absolute !important;
+        top:1em;
+      }
+  
+      >ul>li{
+        width: 333px;
+      }
+    }
+
+
 }
+
 
 /***********************************/
 /***********************************/
