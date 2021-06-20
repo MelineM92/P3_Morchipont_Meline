@@ -59,6 +59,11 @@ $QUERY_DESKTOP_MAX: 1499px;
     box-shadow:0 0 10px 1px $GRAY;
     cursor:pointer;
     position: relative;
+
+    &__img{
+      width: 50%;
+    }
+    
   
   
 
@@ -134,8 +139,14 @@ $QUERY_DESKTOP_MAX: 1499px;
     cursor: pointer;
     box-shadow: 0px 1px 3px 0px grey;}
 
-  >div>button>span{color: white;
+  >div>button>a>span{color: white;
     font-weight: bold;}
+
+  >div>button:hover{
+    background: linear-gradient(-309deg, #b883c5 , #f08fe0 );
+    border-color: #f7f7f7;
+    box-shadow: 0px 3px 6px 0px #4a4848;
+  }
 
 }  
 }
@@ -259,7 +270,9 @@ body{
   background-color: $FONDGREY;
   padding-bottom: 30px;
 
-  &__card{@include restaurant__card;}
+  &__card{@include restaurant__card;
+  
+  }
 }
 .restaurant{@include restaurant();
   >h3{
@@ -270,32 +283,35 @@ body{
   &__card>figcaption{
     font-weight: bold;
     padding-left: 10px;
-    padding-top: 10px;}
+    padding-top: 10px;
+    position: relative;}
 
-  &__card>p{
+  &__card>figcaption>p{
     font-size: smaller;
     padding-left: 10px;
     padding-bottom: 10px;
     margin-top: 10px;}
 
-  &__card>span{
+  &__card::before{
+    content: "Nouveau";
     text-decoration: none;
     background-color:$TURQUOISE;
     padding: 5px;position: absolute;
     top: 5%;
     right: 10%;
     color: #4b9e8f;
-    font-weight: bold;}
+    font-weight: bold;
+    }
 
-  &__card>i{
+  &__card>figcaption>i{
     position: absolute;
-    top: 85%;
+    top: 0%;
     right: 5%;
     cursor: pointer;}
 
-  &__card>i:before{content:"🤍";}
+  &__card>figcaption>i:before{content:"🤍";}
 
-  &__card>i:hover:before{content:"💜";}
+  &__card>figcaption>i:hover:before{content:"💜";}
   
   &__img{
     width: 100%;
@@ -431,7 +447,6 @@ body{
     &__plats{@extend .fonctionnement;
     >ul{
         animation: animationMenu 2s ease-in 1;
-        overflow: hidden;
 
       >li{
         list-style: none;
@@ -441,6 +456,7 @@ body{
         border-radius: 30px;
         box-shadow: 1px 2px 5px lightgrey;
         background-color: $WHITE;
+        overflow: hidden;
 
         >h3{
           position: relative;
@@ -528,6 +544,12 @@ body{
     font-weight: bold;
     margin: auto;
     margin-bottom: 3em;}
+
+  &__commander:hover{
+    background: linear-gradient(-309deg, #b883c5 , #f08fe0 );
+    border-color: #f7f7f7;
+    box-shadow: 0px 3px 6px 0px #4a4848;
+  }
 }
 
 
@@ -682,11 +704,7 @@ body{
 }
 
 
-/***********************************/
-/***********************************/
-/************vendors****************/
-
-/***********************************/
+/************************************/
 /***********************************/
 
 

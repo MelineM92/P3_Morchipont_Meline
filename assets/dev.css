@@ -479,6 +479,9 @@ ul {
   cursor: pointer;
   position: relative;
 }
+.headerbarre__img {
+  width: 50%;
+}
 .headerbarre__btnRetour {
   color: black;
   position: absolute;
@@ -542,9 +545,14 @@ ul {
   cursor: pointer;
   box-shadow: 0px 1px 3px 0px grey;
 }
-.jumbotron__cta > div > button > span {
+.jumbotron__cta > div > button > a > span {
   color: white;
   font-weight: bold;
+}
+.jumbotron__cta > div > button:hover {
+  background: linear-gradient(-309deg, #b883c5, #f08fe0);
+  border-color: #f7f7f7;
+  box-shadow: 0px 3px 6px 0px #4a4848;
 }
 
 .fonctionnement__titre {
@@ -622,14 +630,16 @@ ul {
   font-weight: bold;
   padding-left: 10px;
   padding-top: 10px;
+  position: relative;
 }
-.restaurant__card > p {
+.restaurant__card > figcaption > p {
   font-size: smaller;
   padding-left: 10px;
   padding-bottom: 10px;
   margin-top: 10px;
 }
-.restaurant__card > span {
+.restaurant__card::before {
+  content: "Nouveau";
   text-decoration: none;
   background-color: #99E2D0;
   padding: 5px;
@@ -639,16 +649,16 @@ ul {
   color: #4b9e8f;
   font-weight: bold;
 }
-.restaurant__card > i {
+.restaurant__card > figcaption > i {
   position: absolute;
-  top: 85%;
+  top: 0%;
   right: 5%;
   cursor: pointer;
 }
-.restaurant__card > i:before {
+.restaurant__card > figcaption > i:before {
   content: "🤍";
 }
-.restaurant__card > i:hover:before {
+.restaurant__card > figcaption > i:hover:before {
   content: "💜";
 }
 .restaurant__img {
@@ -751,7 +761,6 @@ ul {
 }
 .laCarte__plats > ul {
   animation: animationMenu 2s ease-in 1;
-  overflow: hidden;
 }
 .laCarte__plats > ul > li {
   list-style: none;
@@ -761,6 +770,7 @@ ul {
   border-radius: 30px;
   box-shadow: 1px 2px 5px lightgrey;
   background-color: #FFF;
+  overflow: hidden;
 }
 .laCarte__plats > ul > li > h3 {
   position: relative;
@@ -841,6 +851,11 @@ ul {
   font-weight: bold;
   margin: auto;
   margin-bottom: 3em;
+}
+.laCarte__commander:hover {
+  background: linear-gradient(-309deg, #b883c5, #f08fe0);
+  border-color: #f7f7f7;
+  box-shadow: 0px 3px 6px 0px #4a4848;
 }
 
 @keyframes animationMenu {
@@ -962,10 +977,7 @@ ul {
     width: 333px;
   }
 }
-/***********************************/
-/***********************************/
-/************vendors****************/
-/***********************************/
+/************************************/
 /***********************************/
 
 /*# sourceMappingURL=dev.css.map */
