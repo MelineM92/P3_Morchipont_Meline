@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @charset "UTF-8";
 /*
      DD SOME TRAITMENTS HERE WITH nodejs's package for instance
@@ -55,7 +62,8 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -92,7 +100,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -238,7 +247,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -272,7 +282,8 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -373,9 +384,21 @@ ul {
   bottom: 0;
   left: 0;
   background-color: black;
-  animation: ok 3s linear 1;
+  -webkit-animation: ok 3s linear 1;
+          animation: ok 3s linear 1;
   z-index: -1;
   opacity: 0;
+}
+
+@-webkit-keyframes ok {
+  from {
+    z-index: 1;
+    opacity: 1;
+  }
+  to {
+    z-index: -1;
+    opacity: 0;
+  }
 }
 
 @keyframes ok {
@@ -395,12 +418,14 @@ ul {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  perspective: 800px;
+  -webkit-perspective: 800px;
+          perspective: 800px;
 }
 
 .loader__inner {
   position: absolute;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -409,46 +434,86 @@ ul {
 .loader__inner.one {
   left: 0%;
   top: 0%;
-  animation: rotate-one 1s linear infinite;
+  -webkit-animation: rotate-one 1s linear infinite;
+          animation: rotate-one 1s linear infinite;
   border-bottom: 3px solid #EFEFFA;
 }
 
 .loader__inner.two {
   right: 0%;
   top: 0%;
-  animation: rotate-two 1s linear infinite;
+  -webkit-animation: rotate-two 1s linear infinite;
+          animation: rotate-two 1s linear infinite;
   border-right: 3px solid #EFEFFA;
 }
 
 .loader__inner.three {
   right: 0%;
   bottom: 0%;
-  animation: rotate-three 1s linear infinite;
+  -webkit-animation: rotate-three 1s linear infinite;
+          animation: rotate-three 1s linear infinite;
   border-top: 3px solid #EFEFFA;
+}
+
+@-webkit-keyframes rotate-one {
+  0% {
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+            transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+            transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
 }
 
 @keyframes rotate-one {
   0% {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+            transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
   }
   100% {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+            transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+@-webkit-keyframes rotate-two {
+  0% {
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+            transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+            transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
   }
 }
 @keyframes rotate-two {
   0% {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+            transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
   }
   100% {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+            transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+@-webkit-keyframes rotate-three {
+  0% {
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+            transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+            transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
 }
 @keyframes rotate-three {
   0% {
-    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+            transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
   }
   100% {
-    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+            transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
 }
 /**/
@@ -472,10 +537,15 @@ ul {
 /***********************************/
 /************POUR mobile****************/
 .headerbarre {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 1rem;
-  box-shadow: 0 0 10px 1px #999;
+  -webkit-box-shadow: 0 0 10px 1px #999;
+          box-shadow: 0 0 10px 1px #999;
   cursor: pointer;
   position: relative;
 }
@@ -487,20 +557,33 @@ ul {
   position: absolute;
   left: 0;
   top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .jumbotron {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   background-color: #dad8d8;
 }
 .jumbotron__map {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 12px 0;
 }
 .jumbotron__map > i {
@@ -530,9 +613,13 @@ ul {
   color: darkgray;
 }
 .jumbotron__cta > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 8px 0 0 0;
 }
 .jumbotron__cta > div > button {
@@ -540,19 +627,23 @@ ul {
   height: 43px;
   border-radius: 25px 25px 25px 25px;
   border: none;
+  background: -o-linear-gradient(96deg, #9356DC, #FF79DA);
   background: linear-gradient(-6deg, #9356DC, #FF79DA);
   border-color: #f7f7f7;
   cursor: pointer;
-  box-shadow: 0px 1px 3px 0px grey;
+  -webkit-box-shadow: 0px 1px 3px 0px grey;
+          box-shadow: 0px 1px 3px 0px grey;
 }
 .jumbotron__cta > div > button > a > span {
   color: white;
   font-weight: bold;
 }
 .jumbotron__cta > div > button:hover {
+  background: -o-linear-gradient(39deg, #b883c5, #f08fe0);
   background: linear-gradient(-309deg, #b883c5, #f08fe0);
   border-color: #f7f7f7;
-  box-shadow: 0px 3px 6px 0px #4a4848;
+  -webkit-box-shadow: 0px 3px 6px 0px #4a4848;
+          box-shadow: 0px 3px 6px 0px #4a4848;
 }
 
 .fonctionnement__titre {
@@ -583,7 +674,8 @@ ul {
   padding: 25px;
   margin: 30px;
   border-radius: 25px;
-  box-shadow: 0 0 6px 0px #F6F6F6;
+  -webkit-box-shadow: 0 0 6px 0px #F6F6F6;
+          box-shadow: 0 0 6px 0px #F6F6F6;
 }
 .fonctionnement > ul.--menupage > li, .laCarte__plats > ul.--menupage > li {
   background-color: white;
@@ -665,7 +757,8 @@ ul {
   width: 100%;
   height: 300px;
   border-radius: 10% 10% 0 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .PDP {
@@ -716,7 +809,8 @@ ul {
 }
 .bg > img {
   margin: 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .laCarte {
@@ -760,7 +854,8 @@ ul {
   overflow: hidden;
 }
 .laCarte__plats > ul {
-  animation: animationMenu 2s ease-in 1;
+  -webkit-animation: animationMenu 2s ease-in 1;
+          animation: animationMenu 2s ease-in 1;
 }
 .laCarte__plats > ul > li {
   list-style: none;
@@ -768,7 +863,8 @@ ul {
   position: relative;
   padding: 2em;
   border-radius: 30px;
-  box-shadow: 1px 2px 5px lightgrey;
+  -webkit-box-shadow: 1px 2px 5px lightgrey;
+          box-shadow: 1px 2px 5px lightgrey;
   background-color: #FFF;
   overflow: hidden;
 }
@@ -779,9 +875,13 @@ ul {
   margin-top: 0;
 }
 .laCarte__plats > ul > li > div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   top: 0;
   left: 0;
   width: 100%;
@@ -798,12 +898,17 @@ ul {
   text-align: center;
   font-size: 2em;
   color: #99E2D0;
+  -webkit-transition: right 0.4s ease 0s, -webkit-transform 0.4s ease 0s;
+  transition: right 0.4s ease 0s, -webkit-transform 0.4s ease 0s;
+  -o-transition: transform 0.4s ease 0s, right 0.4s ease 0s;
   transition: transform 0.4s ease 0s, right 0.4s ease 0s;
+  transition: transform 0.4s ease 0s, right 0.4s ease 0s, -webkit-transform 0.4s ease 0s;
   border: solid #FFF;
   background-color: #FFF;
   border-radius: 2em;
   border-width: initial;
-  border-image: initial;
+  -o-border-image: initial;
+     border-image: initial;
   cursor: pointer;
 }
 .laCarte__plats > ul > li > div:first-child::after {
@@ -811,6 +916,8 @@ ul {
   width: 0px;
   height: 100%;
   right: 0;
+  -webkit-transition: width 0.4s;
+  -o-transition: width 0.4s;
   transition: width 0.4s;
   background: #99E2D0;
   border-radius: 0 30px 30px 0;
@@ -825,6 +932,8 @@ ul {
   bottom: 0px;
   display: inline-block;
   height: 7px;
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
   transition: 400ms;
   padding-right: 1rem;
 }
@@ -833,7 +942,8 @@ ul {
   font-weight: 300;
   width: 100%;
   white-space: nowrap;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   margin-bottom: 0.5em;
   overflow: hidden;
 }
@@ -843,19 +953,32 @@ ul {
   height: 43px;
   border-radius: 25px 25px 25px 25px;
   border: none;
+  background: -o-linear-gradient(96deg, #9356DC, #FF79DA);
   background: linear-gradient(-6deg, #9356DC, #FF79DA);
   border-color: #f7f7f7;
   cursor: pointer;
-  box-shadow: 0px 1px 3px 0px grey;
+  -webkit-box-shadow: 0px 1px 3px 0px grey;
+          box-shadow: 0px 1px 3px 0px grey;
   color: white;
   font-weight: bold;
   margin: auto;
   margin-bottom: 3em;
 }
 .laCarte__commander:hover {
+  background: -o-linear-gradient(39deg, #b883c5, #f08fe0);
   background: linear-gradient(-309deg, #b883c5, #f08fe0);
   border-color: #f7f7f7;
-  box-shadow: 0px 3px 6px 0px #4a4848;
+  -webkit-box-shadow: 0px 3px 6px 0px #4a4848;
+          box-shadow: 0px 3px 6px 0px #4a4848;
+}
+
+@-webkit-keyframes animationMenu {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 400px;
+  }
 }
 
 @keyframes animationMenu {
@@ -879,8 +1002,12 @@ ul {
 /************MEDIA QUERIES*****************/
 @media only screen and (min-width: 501px) and (max-width: 999px) {
   .fonctionnement, .laCarte__plats {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .fonctionnement__titre {
     position: absolute;
@@ -892,10 +1019,15 @@ ul {
   .restaurant {
     text-align: -webkit-center;
     padding-top: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     position: relative;
   }
   .restaurant > h3 {
@@ -929,8 +1061,12 @@ ul {
 }
 @media only screen and (min-width: 1000px) and (max-width: 1499px) {
   .fonctionnement, .laCarte__plats {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .fonctionnement__titre {
     position: absolute;
@@ -942,10 +1078,15 @@ ul {
   .restaurant {
     text-align: -webkit-center;
     padding-top: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     position: relative;
   }
   .restaurant > h3 {
@@ -979,5 +1120,3 @@ ul {
 }
 /************************************/
 /***********************************/
-
-/*# sourceMappingURL=dev.css.map */
