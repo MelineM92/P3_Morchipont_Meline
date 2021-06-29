@@ -1,19 +1,4 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 @charset "UTF-8";
-/*
-     DD SOME TRAITMENTS HERE WITH nodejs's package for instance
-     THIS FILE WOULD BE IMPORTED FROM style.scss TO build/style.css
-*/
-/**/
-/**/
-/**/
-/**/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -62,8 +47,7 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -100,8 +84,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -247,8 +230,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -282,8 +264,7 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -365,7 +346,7 @@ ul {
   list-style: none;
 }
 
-/**/
+/*@import "./base/typography";*/
 /**/
 a {
   text-decoration: none;
@@ -376,7 +357,7 @@ ul {
   padding: 0;
 }
 
-/**/
+/*@import "./components/buttons";*/
 #loader {
   position: fixed;
   top: 0;
@@ -384,24 +365,12 @@ ul {
   bottom: 0;
   left: 0;
   background-color: black;
-  -webkit-animation: ok 3s linear 1;
-          animation: ok 3s linear 1;
+  animation: homeloader 3s linear 1;
   z-index: -1;
   opacity: 0;
 }
 
-@-webkit-keyframes ok {
-  from {
-    z-index: 1;
-    opacity: 1;
-  }
-  to {
-    z-index: -1;
-    opacity: 0;
-  }
-}
-
-@keyframes ok {
+@keyframes homeloader {
   from {
     z-index: 1;
     opacity: 1;
@@ -418,14 +387,12 @@ ul {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  -webkit-perspective: 800px;
-          perspective: 800px;
+  perspective: 800px;
 }
 
 .loader__inner {
   position: absolute;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -434,102 +401,49 @@ ul {
 .loader__inner.one {
   left: 0%;
   top: 0%;
-  -webkit-animation: rotate-one 1s linear infinite;
-          animation: rotate-one 1s linear infinite;
+  animation: rotate-one 1s linear infinite;
   border-bottom: 3px solid #EFEFFA;
 }
 
 .loader__inner.two {
   right: 0%;
   top: 0%;
-  -webkit-animation: rotate-two 1s linear infinite;
-          animation: rotate-two 1s linear infinite;
+  animation: rotate-two 1s linear infinite;
   border-right: 3px solid #EFEFFA;
 }
 
 .loader__inner.three {
   right: 0%;
   bottom: 0%;
-  -webkit-animation: rotate-three 1s linear infinite;
-          animation: rotate-three 1s linear infinite;
+  animation: rotate-three 1s linear infinite;
   border-top: 3px solid #EFEFFA;
-}
-
-@-webkit-keyframes rotate-one {
-  0% {
-    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
-            transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
-  }
-  100% {
-    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
-            transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
-  }
 }
 
 @keyframes rotate-one {
   0% {
-    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
-            transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
   }
   100% {
-    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
-            transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
-  }
-}
-@-webkit-keyframes rotate-two {
-  0% {
-    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-            transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-  }
-  100% {
-    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-            transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
   }
 }
 @keyframes rotate-two {
   0% {
-    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-            transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
   }
   100% {
-    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-            transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-  }
-}
-@-webkit-keyframes rotate-three {
-  0% {
-    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
-            transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
-  }
-  100% {
-    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
-            transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
   }
 }
 @keyframes rotate-three {
   0% {
-    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
-            transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
   }
   100% {
-    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
-            transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
 }
-/**/
-/* ooo */
-/**/
-/**/
-/**/
-/**/
-/**/
 /***********************************/
-/***********************************/
-/************utils******************/
-/***********************************/
-/***********************************/
-/***********************************/
-/************base*******************/
 :root {
   font-family: Roboto;
 }
@@ -537,15 +451,10 @@ ul {
 /***********************************/
 /************POUR mobile****************/
 .headerbarre {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 1rem;
-  -webkit-box-shadow: 0 0 10px 1px #999;
-          box-shadow: 0 0 10px 1px #999;
+  box-shadow: 0 0 10px 1px #999;
   cursor: pointer;
   position: relative;
 }
@@ -557,33 +466,20 @@ ul {
   position: absolute;
   left: 0;
   top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .jumbotron {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
   background-color: #dad8d8;
 }
 .jumbotron__map {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 12px 0;
 }
 .jumbotron__map > i {
@@ -600,7 +496,7 @@ ul {
 .jumbotron__cta {
   width: 100%;
   padding-bottom: 47px;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 .jumbotron__cta > h1 {
   padding: 0 101px;
@@ -613,13 +509,9 @@ ul {
   color: darkgray;
 }
 .jumbotron__cta > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 8px 0 0 0;
 }
 .jumbotron__cta > div > button {
@@ -627,23 +519,19 @@ ul {
   height: 43px;
   border-radius: 25px 25px 25px 25px;
   border: none;
-  background: -o-linear-gradient(96deg, #9356DC, #FF79DA);
-  background: linear-gradient(-6deg, #9356DC, #FF79DA);
+  background: linear-gradient(-6deg, #9356dc, #ff79da);
   border-color: #f7f7f7;
   cursor: pointer;
-  -webkit-box-shadow: 0px 1px 3px 0px grey;
-          box-shadow: 0px 1px 3px 0px grey;
+  box-shadow: 0px 1px 3px 0px grey;
 }
 .jumbotron__cta > div > button > a > span {
   color: white;
   font-weight: bold;
 }
 .jumbotron__cta > div > button:hover {
-  background: -o-linear-gradient(39deg, #b883c5, #f08fe0);
   background: linear-gradient(-309deg, #b883c5, #f08fe0);
   border-color: #f7f7f7;
-  -webkit-box-shadow: 0px 3px 6px 0px #4a4848;
-          box-shadow: 0px 3px 6px 0px #4a4848;
+  box-shadow: 0px 3px 6px 0px #4a4848;
 }
 
 .fonctionnement__titre {
@@ -662,20 +550,19 @@ ul {
 .fonctionnement__list .fa-store {
   padding-left: 15px;
   padding-right: 15px;
-  color: #9356DC;
+  color: #9356dc;
 }
 .fonctionnement__list .titrenav {
   font-weight: bold;
 }
 .fonctionnement > ul > li, .laCarte__plats > ul > li {
   position: relative;
-  background: #F6F6F6;
+  background: #f6f6f6;
   list-style: none;
   padding: 25px;
   margin: 30px;
   border-radius: 25px;
-  -webkit-box-shadow: 0 0 6px 0px #F6F6F6;
-          box-shadow: 0 0 6px 0px #F6F6F6;
+  box-shadow: 0 0 6px 0px #f6f6f6;
 }
 .fonctionnement > ul.--menupage > li, .laCarte__plats > ul.--menupage > li {
   background-color: white;
@@ -683,7 +570,7 @@ ul {
 }
 .fonctionnement > ul.--counter > li::before, .laCarte__plats > ul.--counter > li::before {
   content: "1";
-  background-color: #9356DC;
+  background-color: #9356dc;
   width: 20px;
   height: 20px;
   padding: 5px;
@@ -705,7 +592,7 @@ ul {
 }
 
 .restaurant {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   padding-bottom: 30px;
 }
 .restaurant__card {
@@ -733,7 +620,7 @@ ul {
 .restaurant__card::before {
   content: "Nouveau";
   text-decoration: none;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   padding: 5px;
   position: absolute;
   top: 5%;
@@ -757,8 +644,7 @@ ul {
   width: 100%;
   height: 300px;
   border-radius: 10% 10% 0 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .PDP {
@@ -772,11 +658,11 @@ ul {
 .PDP__omf .ST {
   padding-top: 10px;
   padding-left: 70px;
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
 }
 .PDP__omf .ST1 {
-  color: #FFF;
+  color: #fff;
   padding-top: 10px;
   padding-left: 40px;
   cursor: pointer;
@@ -784,18 +670,18 @@ ul {
 .PDP__omf .fa-utensils {
   position: absolute;
   left: 40px;
-  color: #FFF;
+  color: #fff;
 }
 .PDP__omf .fa-hands-helping {
   position: absolute;
   left: 40px;
-  color: #FFF;
+  color: #fff;
 }
 .PDP__omf > a {
   text-decoration: none;
 }
 .PDP .titre {
-  padding: 20Px 0px 0 35px;
+  padding: 20px 0px 0 35px;
   margin-bottom: 15px;
   font-family: "Shrikhand";
   color: white;
@@ -809,8 +695,7 @@ ul {
 }
 .bg > img {
   margin: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .laCarte {
@@ -854,8 +739,8 @@ ul {
   overflow: hidden;
 }
 .laCarte__plats > ul {
-  -webkit-animation: animationMenu 2s ease-in 1;
-          animation: animationMenu 2s ease-in 1;
+  animation: animationMenu 2s ease-in 1;
+  overflow: hidden;
 }
 .laCarte__plats > ul > li {
   list-style: none;
@@ -863,9 +748,8 @@ ul {
   position: relative;
   padding: 2em;
   border-radius: 30px;
-  -webkit-box-shadow: 1px 2px 5px lightgrey;
-          box-shadow: 1px 2px 5px lightgrey;
-  background-color: #FFF;
+  box-shadow: 1px 2px 5px lightgrey;
+  background-color: #fff;
   overflow: hidden;
 }
 .laCarte__plats > ul > li > h3 {
@@ -875,13 +759,9 @@ ul {
   margin-top: 0;
 }
 .laCarte__plats > ul > li > div:first-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: absolute;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   top: 0;
   left: 0;
   width: 100%;
@@ -897,18 +777,13 @@ ul {
   height: 30px;
   text-align: center;
   font-size: 2em;
-  color: #99E2D0;
-  -webkit-transition: right 0.4s ease 0s, -webkit-transform 0.4s ease 0s;
-  transition: right 0.4s ease 0s, -webkit-transform 0.4s ease 0s;
-  -o-transition: transform 0.4s ease 0s, right 0.4s ease 0s;
-  transition: transform 0.4s ease 0s, right 0.4s ease 0s;
-  transition: transform 0.4s ease 0s, right 0.4s ease 0s, -webkit-transform 0.4s ease 0s;
-  border: solid #FFF;
-  background-color: #FFF;
+  color: #99e2d0;
+  transition: right 0.4s ease 0s;
+  border: solid #fff;
+  background-color: #fff;
   border-radius: 2em;
   border-width: initial;
-  -o-border-image: initial;
-     border-image: initial;
+  border-image: initial;
   cursor: pointer;
 }
 .laCarte__plats > ul > li > div:first-child::after {
@@ -916,24 +791,20 @@ ul {
   width: 0px;
   height: 100%;
   right: 0;
-  -webkit-transition: width 0.4s;
-  -o-transition: width 0.4s;
   transition: width 0.4s;
-  background: #99E2D0;
+  background: #99e2d0;
   border-radius: 0 30px 30px 0;
   position: relative;
   cursor: pointer;
 }
 .laCarte__plats > ul > li > div:first-child > p {
-  margin: 21px 20PX;
+  margin: 21px 20px;
   font-weight: bold;
   font-size: medium;
   right: 20px;
   bottom: 0px;
   display: inline-block;
   height: 7px;
-  -webkit-transition: 400ms;
-  -o-transition: 400ms;
   transition: 400ms;
   padding-right: 1rem;
 }
@@ -942,8 +813,7 @@ ul {
   font-weight: 300;
   width: 100%;
   white-space: nowrap;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   margin-bottom: 0.5em;
   overflow: hidden;
 }
@@ -953,32 +823,19 @@ ul {
   height: 43px;
   border-radius: 25px 25px 25px 25px;
   border: none;
-  background: -o-linear-gradient(96deg, #9356DC, #FF79DA);
-  background: linear-gradient(-6deg, #9356DC, #FF79DA);
+  background: linear-gradient(-6deg, #9356dc, #ff79da);
   border-color: #f7f7f7;
   cursor: pointer;
-  -webkit-box-shadow: 0px 1px 3px 0px grey;
-          box-shadow: 0px 1px 3px 0px grey;
+  box-shadow: 0px 1px 3px 0px grey;
   color: white;
   font-weight: bold;
   margin: auto;
   margin-bottom: 3em;
 }
 .laCarte__commander:hover {
-  background: -o-linear-gradient(39deg, #b883c5, #f08fe0);
   background: linear-gradient(-309deg, #b883c5, #f08fe0);
   border-color: #f7f7f7;
-  -webkit-box-shadow: 0px 3px 6px 0px #4a4848;
-          box-shadow: 0px 3px 6px 0px #4a4848;
-}
-
-@-webkit-keyframes animationMenu {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 400px;
-  }
+  box-shadow: 0px 3px 6px 0px #4a4848;
 }
 
 @keyframes animationMenu {
@@ -995,19 +852,14 @@ ul {
 }
 
 .laCarte__plats > ul > li:hover > div:after {
-  background: #99E2D0;
   width: 200px;
 }
 
 /************MEDIA QUERIES*****************/
 @media only screen and (min-width: 501px) and (max-width: 999px) {
   .fonctionnement, .laCarte__plats {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .fonctionnement__titre {
     position: absolute;
@@ -1019,15 +871,10 @@ ul {
   .restaurant {
     text-align: -webkit-center;
     padding-top: 3em;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-line-pack: distribute;
-        align-content: space-around;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
     position: relative;
   }
   .restaurant > h3 {
@@ -1061,12 +908,8 @@ ul {
 }
 @media only screen and (min-width: 1000px) and (max-width: 1499px) {
   .fonctionnement, .laCarte__plats {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .fonctionnement__titre {
     position: absolute;
@@ -1078,15 +921,10 @@ ul {
   .restaurant {
     text-align: -webkit-center;
     padding-top: 3em;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-line-pack: distribute;
-        align-content: space-around;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
     position: relative;
   }
   .restaurant > h3 {
@@ -1120,3 +958,5 @@ ul {
 }
 /************************************/
 /***********************************/
+
+/*# sourceMappingURL=dev.css.map */
